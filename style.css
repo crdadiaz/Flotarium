@@ -1,0 +1,39 @@
+Body{
+    font-family: 'Quattrocento Sans', sans-serif;
+    background-color: rgba(0,0,0,1.00);
+    text-align: center;
+    text-decoration-color: royalblue;
+    background: black !important;
+}
+
+h2{
+    font-family: 'Quattrocento Sans', sans-serif;
+    padding-top: 5%;
+    color:white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+section{
+    position: center;
+    width: 100%;
+    height: 80vh;
+    padding :100px;
+    display: flex;
+}
+
+section img{
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+    Display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
