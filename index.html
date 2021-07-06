@@ -2,14 +2,21 @@
 <html lang="en">
   <div class="All">
   <head>
-    <!-- Cambios de Cristhian-->
+    <!-- Referencia de la fuente.-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap" rel="stylesheet">
-    <!-- Referencia de la fuente.-->
+  
 
-    <script src="scripts.js"></script>
+    <!-- Referencia de la fuente.-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="Scripts.js"></script>
+
 
     <link href="style.css" rel="stylesheet">
+
+    <!-- Required JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -17,9 +24,14 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    
+    <title>Flotarium</title>
 
-    <title>Hello, world!</title>
   </head>
+
+
+
+
   <body class="All">
     <!-- Barra de navegación -->
     <div class="pos-f-t">
@@ -39,28 +51,115 @@
     </div>
     <!-- Ventana Principal -->
     
-<h2>F L O T A R I U M V2</h2>
+<h2>F L O T A R I U M</h2>
     <section>
-      <div class="text-center">
-        <img src="graphics/main image/ezgif.com-gif-maker.gif" data-speed="0" class="layer" alt="...">
-        <img src="graphics/main image/cielo.png" data-speed="0" class="layer" alt="...">
-        <img src="graphics/main image/cueva.png" data-speed="0" class="layer" alt="...">
-        <img src="graphics/main image/montaña2.png" data-speed="3" class="layer" alt="...">
-        <img src="graphics/main image/montaña1.png" data-speed="3" class="layer" alt="...">
-        <img src="graphics/main image/montaña3.png" data-speed="3" class="layer" alt="...">
+      <div>
+        <img src="graphics/main image/cielo.png" data-speed="0" class="layer1" alt="...">
+        <img src="graphics/main image/montaña2.png" data-speed="1" class="layer" alt="...">
+        <img src="graphics/main image/montaña1.png" data-speed="7" class="layer" alt="...">
+        <img src="graphics/main image/montaña3.png" data-speed="5" class="layer" alt="...">
+        <img src="graphics/main image/cueva.png" data-speed="0" class="layer1" alt="...">     
       </div>
     </section>
-    <script type="text/javaScript">
+    <script type="text/javascript">
         document.addEventListener("mousemove",parallax);
         function parallax(e){
-          this.querySelectorAll('.layer').foreach(layer=>{const speed = layer.getAttribute('data-speed')
-          const x = (window.innerWidth - e.pageX*speed)
-          const y = (window.innerWidth - e.pageY*speed)
-  
-        layer.style.transform = `translateX(${x}px) translateY(${y}px)
+
+          this.querySelectorAll('.layer').forEach(layer=>{const speed = layer.getAttribute('data-speed')
+          const x = (window.innerWidth - (e.pageX*speed))/100
+        layer.style.transform = `translateX(${x}px)`
         })
         }
+
     </script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+          $
+        })
+    </script>
+
+
+<section2>
+<h3>¿Qué es Flotarium?</h3>
+
+<h4>Es un tanque de privación sensorial que contiene una solución de agua y sulfato de magnesio (sal Epsom) con una cantidad precisa para crear una densidad similar a la del mar muerto, permitiendo que el cuerpo flote sin menor esfuerzo y disfrutar de la sensación de ingravidez. 
+  Para aumentar la sensación de tranquilidad y bienestar, nuestro tanque aporta musicoterapia, cromoterapia, aromaterapia y Ozono.</h4>
+</section2>
+
+
+<section3>
+  <div class="container mt-2">
+    <div class="row">
+      <div class="col-md-4 col-12">
+        <ul class="list-unstyled">
+          <li class="media">
+            <img class="mr-3" src="file:///C|/Users/Cristhian/AppData/Roaming/Adobe/Dreamweaver 2020/es_ES/Configuration/Temp/Assets/eam434A.tmp/images/35X35.gif" alt="Generic placeholder image">
+            <div class="media-body">
+              <h4 class="mt-0 mb-1">List-based media object</h4>
+              <h4 class="mt-0 mb-1">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</h4>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-4 col-12">
+        <ul class="list-unstyled">
+          <li class="media">
+            <img class="mr-3" src="file:///C|/Users/Cristhian/AppData/Roaming/Adobe/Dreamweaver 2020/es_ES/Configuration/Temp/Assets/eam434A.tmp/images/35X35.gif" alt="Generic placeholder image">
+            <div class="media-body">
+              <h4 class="mt-0 mb-1">List-based media object</h4>
+              <h4 class="mt-0 mb-1">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</h4>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-4 col-12">
+        <ul class="list-unstyled">
+          <li class="media">
+            <img class="mr-3" src="file:///C|/Users/Cristhian/AppData/Roaming/Adobe/Dreamweaver 2020/es_ES/Configuration/Temp/Assets/eam434A.tmp/images/35X35.gif" alt="Generic placeholder image">
+            <div class="media-body">
+              <h4 class="mt-0 mb-1">List-based media object</h4>
+              <h4 class="mt-0 mb-1">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</h4>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section3>
+
+<section4>
+
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-12">
+          <h3 class="text-center">WHO WE ARE</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, ducimus, sit, quibusdam quidem recusandae veniam eos quod error nisi repellat excepturi laboriosam aspernatur suscipit possimus consectetur dolores nihil labore quas eius illo accusamus nulla sed blanditiis porro accusantium. Perspiciatis, perferendis!</p>
+        </div>
+        <div class="col-md-4 col-12">
+          <h3 class="text-center">GET IN TOUCH</h3>
+          <address class="text-center">
+            <strong>MyCompany, Inc.</strong><br>
+            Sunny Autumn Plaza, Grand Coulee,<br>
+            CA, 91308-4075, US<br>
+            <abbr title="Phone">P:</abbr> (123) 456-7890
+          </address>
+        </div>
+        <div class="col-md-4 col-12">
+          <h3 class="text-center">NEWSLETTER</h3>
+          <form>
+            <div class="form-group col-12">
+              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+              <button type="submit" class="btn btn-dark mt-2">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section4>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
@@ -72,6 +171,25 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
     -->
-  </body>
-</div>
+  
+</body>
+<footer>
+
+  <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+<defs>
+<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+</defs>
+<g class="parallax">
+<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(37,248,248,0.7" />
+<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(37,248,248,0.5)" />
+<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(37,248,248,0.3)" />
+<use xlink:href="#gentle-wave" x="48" y="7" fill="#71fae8" />
+</g>
+</svg>
+</footer>
+
+<div class="content flex">
+  <p>Dustrad | 2021 | www.dustrad.com</p>
+  </div>
 </html>
