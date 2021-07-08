@@ -50,7 +50,7 @@ section{
 
 section img{
     position: absolute;
-    top: 25%;
+    top: 36%;
     left: 25%;
     width: 50%;
     height: 50%;
@@ -83,34 +83,7 @@ img[src^="graphics/main image/montaña1.png"] {
  }
  
 img[src^="graphics/main image/agua.png"] { 
-    top: 59%;
-    left: 35.1%;
-    width: 30%;
-    height: 30%;
-    position: center;
-    margin-left: auto;
-    margin-right: auto;
-
-    opacity: 80%;
-    animation: example ;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-}
-
-
-img[src^="graphics/main image/cielo.png"] { 
-    position: absolute;
-    top: 25%;
-    left: 25%;
-    width: 50%;
-    height: 50%;
-    object-fit: contain;
-    Display: flex;
-    margin-left: auto;
-    margin-right: auto; 
-    animation: example ;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
+  filter: url(#turbulence);
 
 }
 

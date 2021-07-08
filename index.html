@@ -25,6 +25,8 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     
+    
+
     <title>Flotarium</title>
 
   </head>
@@ -50,15 +52,46 @@
       </nav>
     </div>
     <!-- Ventana Principal -->
+  
     
 <h2>F L O T A R I U M</h2>
+
+<svg>
+  <filter id="turbulence" x="0" y="0.545" width="100%" height="100%">
+    <feTurbulence id="sea-filter" numOctaves="5" seed="2" baseFrequency="0.02 0.05"></feTurbulence>
+    <feDisplacementMap scale="20" in="SourceGraphic"></feDisplacementMap>
+    
+    <animate xlink:href="#sea-filter" attributeName="baseFrequency" dur="60s" 
+    keyTimes="0;0.5;1" values="0.02 0.06;0.04 0.08;0.02 0.06" repeatCount="indefinite"/>
+
+    <feComponentTransfer color-interpolation-filters="sRGB" result="duotone_cyan_blue">
+      <feFuncR type="table" tableValues="0 1">
+         <animate 
+          id="_animate"
+          attributeName="tableValues" 
+          dur="4s" 
+          values="0 0.2;0.2 0" 
+          fill="freeze"
+          repeatCount="indefinite"
+          />
+      </feFuncR>
+
+
+</rect>
+
+
+  </filter>
+  
+
+</svg>
     <section>
       <div>
         <img src="graphics/main image/cielo.png" data-speed="0" class="layer1" alt="...">
-        <img src="graphics/main image/montaña2.png" data-speed="1" class="layer" alt="...">
-        <img src="graphics/main image/montaña1.png" data-speed="7" class="layer" alt="...">
-        <img src="graphics/main image/montaña3.png" data-speed="5" class="layer" alt="...">
-        <img src="graphics/main image/cueva.png" data-speed="0" class="layer1" alt="...">     
+        <img src="graphics/main image/montaña2.png" data-speed="3" class="layer" alt="...">
+        <img src="graphics/main image/montaña1.png" data-speed="3.5" class="layer" alt="...">
+        <img src="graphics/main image/montaña3.png" data-speed="4" class="layer" alt="...">
+        <img src="graphics/main image/cueva.png" data-speed="0" class="layer1" alt="...">
+        <img src="graphics/main image/agua.png" data-speed="0" class="layer1" alt="...">     
       </div>
     </section>
     <script type="text/javascript">
@@ -73,11 +106,6 @@
 
     </script>
 
-    <script type="text/javascript">
-        $(document).ready(function(){
-          $
-        })
-    </script>
 
 
 <section2>
