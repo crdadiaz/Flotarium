@@ -57,24 +57,13 @@
 <h2>F L O T A R I U M</h2>
 
 <svg>
-  <filter id="turbulence" x="0" y="0.545" width="100%" height="100%">
+  <filter id="turbulence" x="0" y="0.51" width="100%" height="100%">
     <feTurbulence id="sea-filter" numOctaves="5" seed="2" baseFrequency="0.02 0.05"></feTurbulence>
     <feDisplacementMap scale="20" in="SourceGraphic"></feDisplacementMap>
     
     <animate xlink:href="#sea-filter" attributeName="baseFrequency" dur="60s" 
     keyTimes="0;0.5;1" values="0.02 0.06;0.04 0.08;0.02 0.06" repeatCount="indefinite"/>
 
-    <feComponentTransfer color-interpolation-filters="sRGB" result="duotone_cyan_blue">
-      <feFuncR type="table" tableValues="0 1">
-         <animate 
-          id="_animate"
-          attributeName="tableValues" 
-          dur="4s" 
-          values="0 0.2;0.2 0" 
-          fill="freeze"
-          repeatCount="indefinite"
-          />
-      </feFuncR>
 
 
 </rect>
