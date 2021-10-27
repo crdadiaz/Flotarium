@@ -1,0 +1,79 @@
+/* BODY */
+.Body{
+    background-color: black;
+}
+
+/* BLOQUE PROLOGO */
+.Prologo{
+
+}
+
+.Prologo_Logo{
+    filter:invert(100%);
+    display: block;
+    margin: auto;
+
+}
+
+.Prologo_Principal_Title{
+    
+    color: white;
+    text-align: center;
+    font-size: 10vw;
+    font-family: 'Quattrocento Sans', sans-serif;
+    text-shadow: 2px 0 5px white;
+    font-weight: initial;
+    padding-top: 5%;
+    letter-spacing: 1vw;
+      
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ;
+}
+
+.Prologo_Images_Block_Background{
+    padding-top: 5%;
+    left:0;
+    right:0;
+    position: absolute;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.Prologo_Images_Block_Background_with_filter{
+    padding-top: 5%;
+    left:0;
+    right:0;
+    position: absolute;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    filter: url(#turbulence);
+}
+
+
+.AboutUs{
+    position: re;
+    color: white;
+    font-size: 2.5vw;
+    font-family: 'Quattrocento Sans', sans-serif;
+    padding: 10vw;
+    text-align: center;
+    text-shadow: 2px 0 5px white;
+}
+
+.bg-svg {
+    width: 100%;
+    background-image: url(graphics/logo/logo-flotarium_1.svg);
+    background-size: cover;
+    height: 0;
+    padding: 0; /* reset */
+    padding-bottom: 10%;
+    filter:invert(100%);
+  }
+  figure > div {
+    margin: 1em auto;
+  }
