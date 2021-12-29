@@ -9,20 +9,20 @@
    <link rel="preconnect" href="https://fonts.gstatic.com">
    <link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap" rel="stylesheet">
 
-   <!-- Referencia de los estilos-->
+   <!-- ESTILOS-->
    <link href="styles_flexbox.css" rel="stylesheet">
 
-   <!-- Referencia de elementos SVG-->
+   <!-- FILTROS SVG-->
    <svg>
-      <filter id="turbulence" x="0" y="0.54" width="100%" height="99%">
-         <feTurbulence id="sea-filter" numOctaves="3" seed="1" baseFrequency="0.02 0.5"></feTurbulence>
-         <feDisplacementMap scale="5" in="SourceGraphic"></feDisplacementMap>
-         <animate xlink:href="#sea-filter" attributeName="baseFrequency" dur="60s" keyTimes="0;0.5;1"
-            values="0.02 0.06;0.04 0.08;0.02 0.06" repeatCount="indefinite" />
+      <filter id="turbulence" x="0" y="0.1" width="100%" height="99%">
+         <feTurbulence id="sea-filter" numOctaves="3" seed="1" baseFrequency="0.02 0.05"></feTurbulence>
+         <feDisplacementMap scale="8" in="SourceGraphic"></feDisplacementMap>
+         <animate xlink:href="#sea-filter" attributeName="baseFrequency" dur="50s" keyTimes="0;0.5;1"
+            values="0.02 0.15;0.04 0.08;0.05 0.06" repeatCount="indefinite" />
       </filter>
    </svg>
 
-   <!-- Referencia de scripts Front-->
+   <!-- SCRIPTS-->
    <script type="text/javascript">
       document.addEventListener("mousemove", parallax);
       function parallax(e) {
@@ -45,22 +45,29 @@
 </head>
 
 <body>
+   <!--ENVBEZADO-->
    <section class='logo-flex-content'>
       <div class='logo'>
          <img src="graphics/logo/logo-flotarium_1.svg" alt="logo flotarium" class="imagen-lol" style='width:80%'>
       </div>
    </section>
+
+
+   <!--INTRODUCCION-->
    <div class='introduction'>
       <img src="graphics/main image/skybackground.png" data-speed="0" class="Prologo_Images_Block_Background" alt="...">
       <img src="graphics/main image/seabackground.png" data-speed="3.5" class="Prologo_Images_Block_Background"
          alt="...">
       <img src="graphics/main image/seabackground2.png" data-speed="3.5"
          class="Prologo_Images_Block_Background_with_filter" alt="...">
-      <img src="graphics/main image/mountain0.png" data-speed="2" class="Prologo_Images_Background" alt="...">
-      <img src="graphics/main image/mountain1.png" data-speed="1" class="Prologo_Images_Background" alt="...">
-      <img src="graphics/main image/mountain3.png" data-speed="3" class="Prologo_Images_Background" alt="...">
+      <img src="graphics/main image/mountain0.png" data-speed="0" class="Prologo_Images_Background" alt="...">
+      <img src="graphics/main image/mountain1.png" data-speed="-4" class="Prologo_Images_Background" alt="...">
+      <img src="graphics/main image/mountain3.png" data-speed="5" class="Prologo_Images_Background" alt="...">
       <img src="graphics/main image/background.png" data-speed="0" class="Prologo_Image_Not_Absolute" alt="...">
    </div>
+
+
+   <!--QUÉ ES FLOTARIUM-->
    <section class='flex-content'>
       <svg class="waves" id="normal-waves" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
          <defs>
@@ -96,6 +103,9 @@
          aromaterapia y Ozono.
       </div>
    </section>
+
+
+   <!--CÓMO FUNCIONA-->
    <section class='flex-content'>
       <svg class="waves">
          <use xlink:href="#normal-waves" />
@@ -113,6 +123,9 @@
       <div class='imagen-container'><img src="graphics/flotarium_images_reduced/20210927162431_opt.jpg" class='imagen'>
       </div>
    </section>
+
+
+   <!--CUÁL ES LA EXPERIENCIA-->
    <section class='flex-content'>
       <svg class="waves">
          <use xlink:href="#normal-waves" />
@@ -141,6 +154,9 @@
          Aprenderás de la experiencia de la mano de nuestro personal experto de Armonía y Vida.
       </div>
    </section>
+
+
+   <!--CONOCE NUESTRAS INTSTALACIONES-->
    <section class='flex-content'>
       <svg class="waves">
          <use xlink:href="#normal-waves" />
@@ -159,6 +175,9 @@
          </div>
       </div>
    </section>
+
+
+   <!--CUÁLES SON LOS BENEFICIOS-->
    <section class='flex-content'>
       <svg class="waves">
          <use xlink:href="#normal-waves" />
@@ -220,6 +239,9 @@
          </div>
       </div>
    </section>
+
+
+   <!--CONTÁCTANOS-->
    <section class='flex-content'>
       <svg class="waves">
          <use xlink:href="#normal-waves" />

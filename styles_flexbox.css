@@ -1,7 +1,10 @@
+  /* ESTILOS TRANSVERSALES */
+
 body{
-    background-image: linear-gradient(rgb(0, 0, 0),rgb(52, 156, 151));
+    background-image: linear-gradient(rgb(0, 0, 0),rgb(61, 126, 124));
     background-repeat: no-repeat;
     background-attachment: fixed;
+    font-family: 'Quattrocento Sans', sans-serif;
   }
   
   .flex-content{
@@ -10,12 +13,72 @@ body{
     flex-flow: row wrap;
     align-items: center;
   }
-  
-  .caja{
-    border:1px solid;
-    text-align: center;
-    margin: 5px;
+
+  .imagen-container{
+    max-width: 25%;
+    min-width: 310px;
+    padding: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+  
+  .imagen{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    padding: 2%;
+    border-radius: 5%;
+  }
+
+  .texto{
+    text-align: justify;
+    font-family: 'Quattrocento Sans', sans-serif;
+    padding: 1%;
+    color:white;
+    max-width: 35%;
+    min-width: 300px;
+    text-shadow: 2px 0 10px #fdfdfd;
+    font-size: clamp(1rem,2vw,2.5rem);
+    overflow-wrap: break-word;
+  }
+
+  .image-full-lenght{
+    padding: 25px 0;
+    margin: 0 auto;
+    width: 60%;
+    height: 85%;
+  }
+
+  .texto-full-lenght{
+    text-align: justify;
+    font-family: 'Quattrocento Sans', sans-serif;
+    padding: 1%;
+    padding-top: 3%;
+    color:white;
+    max-width: 60%;
+    min-width: 300px;
+    text-shadow: 2px 0 10px #fdfdfd;
+    font-size: clamp(1rem,2vw,2.5rem);
+    overflow-wrap: break-word;
+  }
+
+  .title-principal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 40px;
+    font-family: 'Quattrocento Sans', sans-serif;
+    color:rgb(5, 70, 59);
+    text-shadow: 2px 0 10px #fdfdfd;
+    font-size: clamp(1rem,5vw,5rem);
+    background-color: #c3f6f7;
+  }
+
+
+
+  /* INTRODUCCION */
 
   .logo{
     margin-top: -100px;
@@ -83,183 +146,8 @@ body{
   filter: url(#turbulence);
   }
 
-  .imagen-container{
-    max-width: 25%;
-    min-width: 310px;
-    padding: 1%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 
-
-  .imagen{
-    max-width: 100%;
-    max-height: 100%;
-    display: block;
-    padding: 2%;
-    border-radius: 5%;
-  }
-
-  .map{
-    width: 50vh;
-    height: 50vh;
-    justify-content: center
-  }
-  
-  .texto{
-    text-align: justify;
-    font-family: 'Quattrocento Sans', sans-serif;
-    padding: 1%;
-    color:white;
-    max-width: 35%;
-    min-width: 300px;
-    text-shadow: 2px 0 10px #fdfdfd;
-    font-size: clamp(1rem,2vw,2.5rem);
-    overflow-wrap: break-word;
-  }
-
-  .texto-icons{
-    text-align: center;
-    font-family: 'Quattrocento Sans', sans-serif;
-    padding: 2%;
-    color:white;
-    max-width: 35%;
-    min-width: 300px;
-    font-size: clamp(1rem,2vw,2.5rem);
-  }
-
-  .texto-icons-2{
-    display:flex;
-    align-items: center;
-  }
-
-  .fab
-  {
-    color: white;
-    font-size: clamp(2rem,4vw,5rem);
-    text-align: center;
-  }
-
-  
-  .fas
-  {
-    color: white;
-    font-size: clamp(2rem,4vw,5rem);
-    text-align: center;
-  }
-
-  .texto-full-lenght{
-    text-align: justify;
-    font-family: 'Quattrocento Sans', sans-serif;
-    padding: 1%;
-    padding-top: 3%;
-    color:white;
-    max-width: 60%;
-    min-width: 300px;
-    text-shadow: 2px 0 10px #fdfdfd;
-    font-size: clamp(1rem,2vw,2.5rem);
-    overflow-wrap: break-word;
-  }
-
-  .image-full-lenght{
-    padding: 25px 0;
-    margin: 0 auto;
-    width: 60%;
-    height: 85%;
-  }
-
-  footer{
-    text-align: center;
-    font-family: 'Quattrocento Sans', sans-serif;
-    padding: 5%;
-    padding-top: 3%;
-    color:rgb(0, 0, 0);
-    max-width: 100%;
-    min-width: 200px;
-    font-size: clamp(1rem,2vw,2.5rem);
-    overflow-wrap: break-word;
-    background-color: #c3f6f7;
-  }
-
-  .title-principal{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    min-height: 40px;
-    font-family: 'Quattrocento Sans', sans-serif;
-    color:rgb(5, 70, 59);
-    text-shadow: 2px 0 10px #fdfdfd;
-    font-size: clamp(1rem,5vw,5rem);
-    background-color: #c3f6f7;
-  }
-
-  .title-container{
-    background-color: #c3f6f7;
-  }
-
-
-  .gallery-wrap {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 70vh;
-    border-radius: 5%;
-  }
-  
-  .item:hover {
-    flex: 7;
-  }
-
-  .item {
-    flex: 1;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-    background-repeat: none;
-    transition: flex 0.8s ease;
-    
-  }
-  
-  .item-1 {
-    background-image: url("graphics/flotarium_images_reduced/20210927183423_1_opt.jpg");
-  }
-  
-  .item-2 {
-    background-image: url("graphics/flotarium_images_reduced/20210927155559_opt.jpg");
-  }
-  
-  .item-3 {
-    background-image: url("graphics/flotarium_images_reduced/20210927160414_opt.jpg");
-  }
-  
-  .item-4 {
-    background-image: url("graphics/flotarium_images_reduced/20210927155741_opt.jpg");
-  }
-  
-  .item-5 {
-    background-image: url("graphics/flotarium_images_reduced/20210927163530_opt.jpg");
-  }
-  
-  
-  .waves {
-    position:relative;
-    width: 100%;
-    height:15vh;
-    margin-bottom:-7px; /*Fix for safari gap*/
-    min-height:100px;
-    max-height:150px;
-  }
-  
-  .content {
-    position:relative;
-    height:20vh;
-    text-align:center;
-    background-color: white;
-  }
-  
-  /* Animation */
+  /* CONOCE NUESTRAS INSTALACIONES */
   
   .parallax > use {
     animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
@@ -312,6 +200,126 @@ body{
   }
 
 }
+
+.gallery-wrap {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 70vh;
+  border-radius: 5%;
+}
+
+.item:hover {
+  flex: 7;
+}
+
+.item {
+  flex: 1;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+  transition: flex 0.8s ease;
+}
+
+.item-1 {
+  background-image: url("graphics/flotarium_images_reduced/20210927183423_1_opt.jpg");
+}
+
+.item-2 {
+  background-image: url("graphics/flotarium_images_reduced/20210927155559_opt.jpg");
+}
+
+.item-3 {
+  background-image: url("graphics/flotarium_images_reduced/20210927160414_opt.jpg");
+}
+
+.item-4 {
+  background-image: url("graphics/flotarium_images_reduced/20210927155741_opt.jpg");
+}
+
+.item-5 {
+  background-image: url("graphics/flotarium_images_reduced/20210927163530_opt.jpg");
+}
+
+  /* CONTÁCTANOS */
+
+  .map{
+    width: 50vh;
+    height: 50vh;
+    justify-content: center
+  }
+  
+  .texto-icons{
+    text-align: center;
+    font-family: 'Quattrocento Sans', sans-serif;
+    padding: 2%;
+    color:white;
+    max-width: 35%;
+    min-width: 300px;
+    font-size: clamp(1rem,2vw,2.5rem);
+  }
+
+  .texto-icons-2{
+    display:flex;
+    align-items: center;
+  }
+
+  .fab
+  {
+    color: white;
+    font-size: clamp(2rem,4vw,5rem);
+    text-align: center;
+  }
+
+  .fas
+  {
+    color: white;
+    font-size: clamp(2rem,4vw,5rem);
+    text-align: center;
+  }
+
+
+
+
+
+
+
+
+
+ /* FOOTER */
+
+  footer{
+    text-align: center;
+    font-family: 'Quattrocento Sans', sans-serif;
+    padding: 5%;
+    padding-top: 3%;
+    color:rgb(0, 0, 0);
+    max-width: 100%;
+    min-width: 200px;
+    font-size: clamp(1rem,2vw,2.5rem);
+    overflow-wrap: break-word;
+    background-color: #c3f6f7;
+  }
+
+  
+  .waves {
+    position:relative;
+    width: 100%;
+    height:15vh;
+    margin-bottom:-7px; /*Fix for safari gap*/
+    min-height:100px;
+    max-height:150px;
+  }
+  
+  .content {
+    position:relative;
+    height:20vh;
+    text-align:center;
+    background-color: white;
+  }
+  
+
 
 /* Cards Benefits */
 
