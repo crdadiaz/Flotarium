@@ -1,59 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap" rel="stylesheet">
-    
-    <!-- Referencia de los estilos-->
-    <link href="styles_flexbox.css" rel="stylesheet">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap" rel="stylesheet">
 
-    <svg>
-        <filter id="turbulence" x="0" y="0.54" width="100%" height="99%">
-          <feTurbulence id="sea-filter" numOctaves="3" seed="1" baseFrequency="0.02 0.5"></feTurbulence>
-          <feDisplacementMap scale="5" in="SourceGraphic"></feDisplacementMap>
-          <animate xlink:href="#sea-filter" attributeName="baseFrequency" dur="60s" keyTimes="0;0.5;1"
+   <!-- Referencia de los estilos-->
+   <link href="styles_flexbox.css" rel="stylesheet">
+
+   <!-- Referencia de elementos SVG-->
+   <svg>
+      <filter id="turbulence" x="0" y="0.54" width="100%" height="99%">
+         <feTurbulence id="sea-filter" numOctaves="3" seed="1" baseFrequency="0.02 0.5"></feTurbulence>
+         <feDisplacementMap scale="5" in="SourceGraphic"></feDisplacementMap>
+         <animate xlink:href="#sea-filter" attributeName="baseFrequency" dur="60s" keyTimes="0;0.5;1"
             values="0.02 0.06;0.04 0.08;0.02 0.06" repeatCount="indefinite" />
-        </filter>
-    </svg>
+      </filter>
+   </svg>
 
-    <script type="text/javascript">
+   <!-- Referencia de scripts Front-->
+   <script type="text/javascript">
       document.addEventListener("mousemove", parallax);
       function parallax(e) {
 
-        this.querySelectorAll('.Prologo_Images_Background').forEach(layer => {
-          const speed = layer.getAttribute('data-speed')
-          const x = (window.innerWidth - (e.pageX * speed)) / 100
-          layer.style.transform = `translateX(${x}px)`
-        })
+         this.querySelectorAll('.Prologo_Images_Background').forEach(layer => {
+            const speed = layer.getAttribute('data-speed')
+            const x = (window.innerWidth - (e.pageX * speed)) / 100
+            layer.style.transform = `translateX(${x}px)`
+         })
       }
 
-    </script>
+   </script>
+
+   <!--FONT AWESOME-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <!--ICONOS-->
 
 </head>
+
 <body>
-  <section class='logo-flex-content'>
+   <section class='logo-flex-content'>
       <div class='logo'>
          <img src="graphics/logo/logo-flotarium_1.svg" alt="logo flotarium" class="imagen-lol" style='width:80%'>
       </div>
-  </section>
-  <div class='introduction'>
+   </section>
+   <div class='introduction'>
       <img src="graphics/main image/skybackground.png" data-speed="0" class="Prologo_Images_Block_Background" alt="...">
-      <img src="graphics/main image/seabackground.png" data-speed="3.5" class="Prologo_Images_Block_Background" alt="...">
-      <img src="graphics/main image/seabackground2.png" data-speed="3.5" class="Prologo_Images_Block_Background_with_filter" alt="...">
+      <img src="graphics/main image/seabackground.png" data-speed="3.5" class="Prologo_Images_Block_Background"
+         alt="...">
+      <img src="graphics/main image/seabackground2.png" data-speed="3.5"
+         class="Prologo_Images_Block_Background_with_filter" alt="...">
       <img src="graphics/main image/mountain0.png" data-speed="2" class="Prologo_Images_Background" alt="...">
       <img src="graphics/main image/mountain1.png" data-speed="1" class="Prologo_Images_Background" alt="...">
       <img src="graphics/main image/mountain3.png" data-speed="3" class="Prologo_Images_Background" alt="...">
       <img src="graphics/main image/background.png" data-speed="0" class="Prologo_Image_Not_Absolute" alt="...">
    </div>
-      
    <section class='flex-content'>
-      <div class='title'>
-         ¿Qué es Flotarium?
-      </div>
+      <svg class="waves" id="normal-waves" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+         <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-5 88-5s 58 5 88 5 58-5 88-5 58 5 88 5 v44h-352z" />
+         </defs>
+         <g class="parallax">
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(43, 104, 101, 1)" />
+            <use xlink:href="#gentle-wave" x="48" y="1" fill="rgba(82, 185, 184, 1)" />
+            <use xlink:href="#gentle-wave" x="48" y="2" fill="rgba(149, 219, 222)" />
+            <use xlink:href="#gentle-wave" x="48" y="3.5" fill="#c3f6f7" />
+         </g>
+      </svg>
+      <div class='title-principal'>¿Qué es Flotarium?</div>
+      <svg class="waves" id="reversed-waves" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+         <defs>
+            <path id="gentle-waves" d="M-160 30c44 0 58-5 88-5s 58 5 88 5 58-5 88-5 58 5 88 5 h44v-352z" />
+         </defs>
+         <g class="parallax">
+            <use xlink:href="#gentle-waves" x="48" y="0" fill="rgba(43, 104, 101, 1)" />
+            <use xlink:href="#gentle-waves" x="48" y="1" fill="rgba(82, 185, 184, 1)" />
+            <use xlink:href="#gentle-waves" x="48" y="2" fill="rgba(149, 219, 222)" />
+            <use xlink:href="#gentle-waves" x="48" y="3.5" fill="#c3f6f7" />
+         </g>
+      </svg>
       <div class='imagen-container'>
          <img src="graphics/flotarium_images_reduced/20210927182711_opt.jpg" class='imagen'>
       </div>
@@ -65,89 +96,180 @@
          aromaterapia y Ozono.
       </div>
    </section>
-      <section class='flex-content'>
-         <div class='title'>¿Cómo funciona?</div>
-         <div class='texto'>Es un tanque de privación sensorial que contiene una solución de agua y sulfato de magnesio (sal Epsom)
-            con una cantidad precisa para crear una densidad similar a la del mar muerto, permitiendo que el cuerpo
-            flote sin menor esfuerzo y disfrutar de la sensación de ingravidez. Para aumentar la sensación de
-            tranquilidad
-            y bienestar, nuestro tanque aporta musicoterapia, cromoterapia, aromaterapia y Ozono.</div>
-         <div class='imagen-container'><img src="graphics/flotarium_images_reduced/20210927162431_opt.jpg" class='imagen'></div>
-      </section>
-      <section class='flex-content'>
-         <div class='title'>¿Cuál es la experiencia?</div>
-         <div class='texto-full-lenght'>Nuestro centro terapéutico Armonía y Vida se encuentra ubicado en el sector de la Pradera en Dosquebradas, allí,
-            hemos construido el primer tanque de privación
-            sensorial de la región para ofrecerte la experiencia única de Flotarium y sus beneficios.
-            <br>
-            <br>
-            Agenda tu cita y permítele a tu cuerpo y a tu mente entrar en un estado de relajación profunda para encontrar una
-            calma duradera, todo esto en una sesión
-            de 60 minutos en los que flotarás en nuestro tanque de privación sensorial al igual que lo harías en el mar
-            muerto.
-            <br>
-            <br>
-            No necesitas traer nada, dispondrás de toallas, champú, gel, tapones para los oídos, secadores y una botella de
-            agua, todo incluído en nuestro servicio.
-            <br>
-            <br>
-            Aprenderás de la experiencia de la mano de nuestro personal experto de Armonía y Vida.</div>
-      </section>
-      <section class='flex-content'>
-         <div class='title'>Conoce nuestras instalaciones</div>
-         <div class='image-full-lenght'>
-            <div class="gallery-wrap">
-               <div class="item item-1"></div>
-               <div class="item item-2"></div>
-               <div class="item item-3"></div>
-               <div class="item item-4"></div>
-               <div class="item item-5"></div>
-             </div>
+   <section class='flex-content'>
+      <svg class="waves">
+         <use xlink:href="#normal-waves" />
+      </svg>
+      <div class='title-principal'>¿Cómo funciona?</div>
+      <svg class="waves">
+         <use xlink:href="#reversed-waves" />
+      </svg>
+      <div class='texto'>Es un tanque de privación sensorial que contiene una solución de agua y sulfato de magnesio
+         (sal Epsom)
+         con una cantidad precisa para crear una densidad similar a la del mar muerto, permitiendo que el cuerpo
+         flote sin menor esfuerzo y disfrutar de la sensación de ingravidez. Para aumentar la sensación de
+         tranquilidad
+         y bienestar, nuestro tanque aporta musicoterapia, cromoterapia, aromaterapia y Ozono.</div>
+      <div class='imagen-container'><img src="graphics/flotarium_images_reduced/20210927162431_opt.jpg" class='imagen'>
+      </div>
+   </section>
+   <section class='flex-content'>
+      <svg class="waves">
+         <use xlink:href="#normal-waves" />
+      </svg>
+      <div class='title-principal'>¿Cuál es la experiencia?</div>
+      <svg class="waves">
+         <use xlink:href="#reversed-waves" />
+      </svg>
+      <div class='texto-full-lenght'>Nuestro centro terapéutico Armonía y Vida se encuentra ubicado en el sector de la
+         Pradera en Dosquebradas, allí,
+         hemos construido el primer tanque de privación
+         sensorial de la región para ofrecerte la experiencia única de Flotarium y sus beneficios.
+         <br>
+         <br>
+         Agenda tu cita y permítele a tu cuerpo y a tu mente entrar en un estado de relajación profunda para encontrar
+         una
+         calma duradera, todo esto en una sesión
+         de 60 minutos en los que flotarás en nuestro tanque de privación sensorial al igual que lo harías en el mar
+         muerto.
+         <br>
+         <br>
+         No necesitas traer nada, dispondrás de toallas, champú, gel, tapones para los oídos, secadores y una botella de
+         agua, todo incluído en nuestro servicio.
+         <br>
+         <br>
+         Aprenderás de la experiencia de la mano de nuestro personal experto de Armonía y Vida.
+      </div>
+   </section>
+   <section class='flex-content'>
+      <svg class="waves">
+         <use xlink:href="#normal-waves" />
+      </svg>
+      <div class='title-principal'>Conoce nuestras instalaciones</div>
+      <svg class="waves">
+         <use xlink:href="#reversed-waves" />
+      </svg>
+      <div class='image-full-lenght'>
+         <div class="gallery-wrap">
+            <div class="item item-1"></div>
+            <div class="item item-2"></div>
+            <div class="item item-3"></div>
+            <div class="item item-4"></div>
+            <div class="item item-5"></div>
          </div>
-      </section>
-      <section class='flex-content'>
-         <div class='title'></div>
-         <div class='imagen-container'>Imagen</div>
-         <div class='texto'>Contenido</div>
-      </section>
-      <section class='flex-content'>
-         <div class='title'>¿Cuáles son los beneficios?</div>
-         <div class='imagen-container'>Imagen</div>
-         <div class='texto'>Contenido</div>
-      </section>
-      <section class='flex-content'>
-         <div class='title'>Titulo</div>
-
-      </section>
-      <footer>
-         <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-           viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-           <defs>
-             <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-           </defs>
-           <g class="parallax">
-             <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(43, 104, 101, 1)" />
-             <use xlink:href="#gentle-wave" x="48" y="1" fill="rgba(82, 185, 184, 1)" />
-             <use xlink:href="#gentle-wave" x="48" y="2" fill="rgba(149, 219, 222)" />
-             <use xlink:href="#gentle-wave" x="48" y="3.5" fill="#c3f6f7" />
-           </g>
-         </svg>
-      </footer>
-      <section class='footer'>
-         Dustrad | 2021 | www.dustrad.com
-      </section>
-      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-      viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      </div>
+   </section>
+   <section class='flex-content'>
+      <svg class="waves">
+         <use xlink:href="#normal-waves" />
+      </svg>
+      <div class='title-principal'>¿Cuáles son los beneficios?</div>
+      <svg class="waves">
+         <use xlink:href="#reversed-waves" />
+      </svg>
+      <div class="wrapper">
+         <div class="cols">
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+               <div class="container">
+                  <div class="front" style="background-image: url('graphics/benefits_images/espirituales.jpg')">
+                     <div class="inner">
+                        <p>Espirituales</p>
+                        <span>¡Descúbrelos!</span>
+                     </div>
+                  </div>
+                  <div class="back">
+                     <div class="inner">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae
+                           suscipit c.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+               <div class="container">
+                  <div class="front" style="background-image: url('graphics/benefits_images/fisicos.jpg')">
+                     <div class="inner">
+                        <p>Físicos</p>
+                        <span>¡Descúbrelos!</span>
+                     </div>
+                  </div>
+                  <div class="back">
+                     <div class="inner">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae
+                           suscipit c.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col">
+               <div class="container">
+                  <div class="front" style="background-image: url('graphics/benefits_images/psicologicos.jpg')">
+                     <div class="inner">
+                        <p>Psicológicos</p>
+                        <span>¡Descúbrelos!</span>
+                     </div>
+                  </div>
+                  <div class="back">
+                     <div class="inner">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae
+                           suscipit c.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section class='flex-content'>
+      <svg class="waves">
+         <use xlink:href="#normal-waves" />
+      </svg>
+      <div class='title-principal'>Contáctanos</div>
+      <svg class="waves">
+         <use xlink:href="#reversed-waves" />
+      </svg>
+      <iframe class='map' src="https://www.google.com/maps/d/embed?mid=1t3ZLb9OtakS-RjF0QR5RSv3N4i6Biyhu&ehbc=2E312F">
+      </iframe>
+      <div class='texto-icons'>
+         <br>
+         <h3>¡Síguenos!</h3>
+         <br>
+         <a href="#"><i class="fab fa-whatsapp-square"></i></a>&nbsp
+         <a href="#"><i class="fab fa-instagram-square"></i></a>&nbsp
+         <a href="#"><i class="fab fa-facebook-square"></i></a>&nbsp
+         <a href="#"><i class="fab fa-youtube-square"></i></a>
+         <br>
+         <br>
+         <h3>Habla con nosotros:</h3>
+         <br>
+         <div>
+            <div class='texto-icons-2' &nbsp<a href="#"><i class="fas fa-envelope-square"></i></a>
+               &nbsp gerencia@flotarium.co
+            </div>
+            <div class='texto-icons-2' &nbsp<a href="#"><i class="fas fa-phone-square"></i></a>
+               &nbsp 33052816
+            </div>
+            <div class='texto-icons-2' &nbsp<a href="#"><i class="fas fa-caret-square-right"></i></a>
+               &nbsp La Pradera Dosquebradas
+            </div>
+         </div>
+      </div>
+      </div>
+   </section>
+   <svg class="waves" id="normal-waves" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
       <defs>
-        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+         <path id="gentle-wave-max" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
       </defs>
       <g class="parallax">
-        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(43, 104, 101, 1)" />
-        <use xlink:href="#gentle-wave" x="48" y="1" fill="rgba(82, 185, 184, 1)" />
-        <use xlink:href="#gentle-wave" x="48" y="2" fill="rgba(149, 219, 222)" />
-        <use xlink:href="#gentle-wave" x="48" y="3.5" fill="#c3f6f7" />
+         <use xlink:href="#gentle-wave-max" x="48" y="0" fill="rgba(43, 104, 101, 1)" />
+         <use xlink:href="#gentle-wave-max" x="48" y="1" fill="rgba(82, 185, 184, 1)" />
+         <use xlink:href="#gentle-wave-max" x="48" y="2" fill="rgba(149, 219, 222)" />
+         <use xlink:href="#gentle-wave-max" x="48" y="3.5" fill="#c3f6f7" />
       </g>
-    </svg>
- </footer>
+   </svg>
+   <footer>
+      Dustrad Technologies | 2021 | www.dustrad.com.co
+   </footer>
 </body>
+
 </html>
