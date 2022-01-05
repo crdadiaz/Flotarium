@@ -68,11 +68,10 @@ body{
     align-items: center;
     justify-content: center;
     width: 100%;
-    min-height: 40px;
     font-family: 'Quattrocento Sans', sans-serif;
     color:rgb(5, 70, 59);
-    text-shadow: 2px 0 10px #fdfdfd;
-    font-size: clamp(1rem,5vw,5rem);
+    text-shadow: 1px 0 1px #ffffff;
+    font-size: clamp(1.5rem,5vw,2.5rem);
     background-color: #c3f6f7;
   }
 
@@ -81,15 +80,14 @@ body{
   /* INTRODUCCION */
 
   .logo{
-    margin-top: -100px;
-    overflow: auto;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: -130px;
     filter:invert(100%);
-    font-size: clamp(1rem,2vw,2.5rem);
-  }
-
-  .imagen-logo{
-    font-size: clamp(1rem,2vw,2.5rem);
+    width: 60%;
+    min-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .introduction { 
@@ -97,8 +95,7 @@ body{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 8%;
-    padding-bottom: 8%;
+    padding-bottom: 2%;
   }
 
   .Prologo_Image_Not_Absolute{
@@ -108,7 +105,8 @@ body{
     margin-right: auto;
     left:0;
     right:0;
-    width: 80%;
+    width: 45%;
+    min-width: 300px;
   }
 
   .Prologo_Images_Block_Background{
@@ -119,7 +117,8 @@ body{
     margin-right: auto;
     left:0;
     right:0;
-    width: 85%;
+    width: 48%;
+    min-width: 300px;
   }
 
   .Prologo_Images_Background{
@@ -130,7 +129,20 @@ body{
     margin-right: auto;
     left:0;
     right:0;
-    width: 85%;
+    width: 48%;
+    min-width: 300px;
+  }
+
+  .Prologo_Images_Background_2{
+    position: absolute;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    left:0;
+    right:0;
+    width: 48%;
+    min-width: 300px;
   }
 
   .Prologo_Images_Block_Background_with_filter{
@@ -141,8 +153,8 @@ body{
   margin-right: auto;
   left:0;
   right:0;
-  width: 85%;
-
+  width: 48%;
+  min-width: 300px;
   filter: url(#turbulence);
   }
 
@@ -194,7 +206,7 @@ body{
 {
   .gallery-wrap {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
     height: 70vh;
   }
@@ -242,86 +254,7 @@ body{
   background-image: url("graphics/flotarium_images_reduced/20210927163530_opt.jpg");
 }
 
-  /* CONTÁCTANOS */
-
-  .map{
-    width: 50vh;
-    height: 50vh;
-    justify-content: center
-  }
-  
-  .texto-icons{
-    text-align: center;
-    font-family: 'Quattrocento Sans', sans-serif;
-    padding: 2%;
-    color:white;
-    max-width: 35%;
-    min-width: 300px;
-    font-size: clamp(1rem,2vw,2.5rem);
-  }
-
-  .texto-icons-2{
-    display:flex;
-    align-items: center;
-  }
-
-  .fab
-  {
-    color: white;
-    font-size: clamp(2rem,4vw,5rem);
-    text-align: center;
-  }
-
-  .fas
-  {
-    color: white;
-    font-size: clamp(2rem,4vw,5rem);
-    text-align: center;
-  }
-
-
-
-
-
-
-
-
-
- /* FOOTER */
-
-  footer{
-    text-align: center;
-    font-family: 'Quattrocento Sans', sans-serif;
-    padding: 5%;
-    padding-top: 3%;
-    color:rgb(0, 0, 0);
-    max-width: 100%;
-    min-width: 200px;
-    font-size: clamp(1rem,2vw,2.5rem);
-    overflow-wrap: break-word;
-    background-color: #c3f6f7;
-  }
-
-  
-  .waves {
-    position:relative;
-    width: 100%;
-    height:15vh;
-    margin-bottom:-7px; /*Fix for safari gap*/
-    min-height:100px;
-    max-height:150px;
-  }
-  
-  .content {
-    position:relative;
-    height:20vh;
-    text-align:center;
-    background-color: white;
-  }
-  
-
-
-/* Cards Benefits */
+/* BENEFICIOS */
 
 *{
   margin: 0;
@@ -518,3 +451,75 @@ h1{
     margin: 0 0 2rem 0;
   }
 }
+
+
+  /* CONTÁCTANOS */
+
+  .map{
+    width: 50vh;
+    height: 50vh;
+    justify-content: center
+  }
+  
+  .texto-icons{
+    text-align: center;
+    font-family: 'Quattrocento Sans', sans-serif;
+    padding: 2%;
+    color:white;
+    max-width: 35%;
+    min-width: 300px;
+    font-size: clamp(1rem,2vw,2.5rem);
+  }
+
+  .texto-icons-2{
+    display:flex;
+    align-items: center;
+  }
+
+  .fab
+  {
+    color: white;
+    font-size: clamp(2rem,4vw,5rem);
+    text-align: center;
+  }
+
+  .fas
+  {
+    color: white;
+    font-size: clamp(2rem,4vw,5rem);
+    text-align: center;
+  }
+
+ /* FOOTER */
+
+  footer{
+    text-align: center;
+    font-family: 'Quattrocento Sans', sans-serif;
+    padding: 5%;
+    padding-top: 3%;
+    color:rgb(0, 0, 0);
+    max-width: 100%;
+    min-width: 200px;
+    font-size: clamp(1rem,2vw,2.5rem);
+    overflow-wrap: break-word;
+    background-color: #c3f6f7;
+  }
+
+  
+  .waves {
+    position:relative;
+    width: 100%;
+    height:15vh;
+    margin-bottom:-7px; /*Fix for safari gap*/
+    min-height:100px;
+    max-height:150px;
+  }
+  
+  .content {
+    position:relative;
+    height:20vh;
+    text-align:center;
+    background-color: white;
+  }
+  
+
