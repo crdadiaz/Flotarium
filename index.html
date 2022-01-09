@@ -6,8 +6,11 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
-   <link rel="preconnect" href="https://fonts.gstatic.com">
-   <link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap" rel="stylesheet">
+
+   <!-- TIPOGRAFIA-->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
 
    <!-- ESTILOS-->
    <link href="styles_flexbox.css" rel="stylesheet">
@@ -38,11 +41,10 @@
 
    </script>
 
-   <!--FONT AWESOME-->
+   <!--FONT AWESOME-->   <!--ICONOS-->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
       integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
-   <!--ICONOS-->
 
 </head>
 
@@ -73,27 +75,27 @@
 
    <!--QUÉ ES FLOTARIUM-->
    <section class='flex-content'>
-      <svg class="waves" id="normal-waves" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <svg class="lower-waves" id="normal-waves" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
          <defs>
             <path id="gentle-wave" d="M-160 44c30 0 58-5 88-5s 58 5 88 5 58-5 88-5 58 5 88 5 v44h-352z" />
          </defs>
          <g class="parallax">
-            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(43, 104, 101, 1)" />
-            <use xlink:href="#gentle-wave" x="48" y="1" fill="rgba(82, 185, 184, 1)" />
-            <use xlink:href="#gentle-wave" x="48" y="2" fill="rgba(149, 219, 222)" />
-            <use xlink:href="#gentle-wave" x="48" y="3.5" fill="#c3f6f7" />
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="var(--fourth-wave)" />
+            <use xlink:href="#gentle-wave" x="48" y="1" fill="var(--third-wave)" />
+            <use xlink:href="#gentle-wave" x="48" y="2" fill="var(--second-wave)" />
+            <use xlink:href="#gentle-wave" x="48" y="3.5" fill="var(--principal-wave)"/>
          </g>
       </svg>
       <div class='title-principal'>¿Qué es Flotarium?</div>
-      <svg class="waves" id="reversed-waves" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <svg class="lower-waves" id="reversed-waves" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
          <defs>
             <path id="gentle-waves" d="M-160 30c44 0 58-5 88-5s 58 5 88 5 58-5 88-5 58 5 88 5 h44v-352z" />
          </defs>
          <g class="parallax">
-            <use xlink:href="#gentle-waves" x="48" y="0" fill="rgba(43, 104, 101, 1)" />
-            <use xlink:href="#gentle-waves" x="48" y="1" fill="rgba(82, 185, 184, 1)" />
-            <use xlink:href="#gentle-waves" x="48" y="2" fill="rgba(149, 219, 222)" />
-            <use xlink:href="#gentle-waves" x="48" y="3.5" fill="#c3f6f7" />
+            <use xlink:href="#gentle-waves" x="48" y="0" fill="var(--fourth-wave)" />
+            <use xlink:href="#gentle-waves" x="48" y="1" fill="var(--third-wave)" />
+            <use xlink:href="#gentle-waves" x="48" y="2" fill="var(--second-wave)" />
+            <use xlink:href="#gentle-waves" x="48" y="3.5" fill="var(--principal-wave)"/>
          </g>
       </svg>
       <div class='imagen-container'>
@@ -111,19 +113,17 @@
 
    <!--CÓMO FUNCIONA-->
    <section class='flex-content'>
-      <svg class="waves">
+      <svg class="lower-waves">
          <use xlink:href="#normal-waves" />
       </svg>
       <div class='title-principal'>¿Cómo funciona?</div>
-      <svg class="waves">
+      <svg class="lower-waves">
          <use xlink:href="#reversed-waves" />
       </svg>
-      <div class='texto'>Es un tanque de privación sensorial que contiene una solución de agua y sulfato de magnesio
-         (sal Epsom)
-         con una cantidad precisa para crear una densidad similar a la del mar muerto, permitiendo que el cuerpo
-         flote sin menor esfuerzo y disfrutar de la sensación de ingravidez. Para aumentar la sensación de
-         tranquilidad
-         y bienestar, nuestro tanque aporta musicoterapia, cromoterapia, aromaterapia y Ozono.</div>
+      <div class='texto'>El tanque de aislamiento sensorial contiene en su interior 600 litros de agua y 300 kilos de sales Epsom o sulfato de magnesio (un compuesto químico conocido con la fórmula Mg SO4·7H2O). De esta forma, se consigue crear una densidad como la del Mar Muerto donde cualquier intento de sumergirse se ve frustrado ya que el cuerpo flota sin ningún tipo de esfuerzo. 
+         Se pierde la noción del peso del cuerpo. 
+         La temperatura del agua oscila entre los 35º y los 37.5º C, de esta forma no se siente ni frío ni calor. 
+         La persona que entra en el tanque tiene la sensación de que su cuerpo se funde con el agua.</div>
       <div class='imagen-container'><img src="graphics/flotarium_images_reduced/20210927162431_opt.jpg" class='imagen'>
       </div>
    </section>
@@ -131,11 +131,11 @@
 
    <!--CUÁL ES LA EXPERIENCIA-->
    <section class='flex-content'>
-      <svg class="waves">
+      <svg class="lower-waves">
          <use xlink:href="#normal-waves" />
       </svg>
       <div class='title-principal'>¿Cuál es la experiencia?</div>
-      <svg class="waves">
+      <svg class="lower-waves">
          <use xlink:href="#reversed-waves" />
       </svg>
       <div class='texto-full-lenght'>Nuestro centro terapéutico Armonía y Vida se encuentra ubicado en el sector de la
@@ -162,11 +162,11 @@
 
    <!--CONOCE NUESTRAS INTSTALACIONES-->
    <section class='flex-content'>
-      <svg class="waves">
+      <svg class="lower-waves">
          <use xlink:href="#normal-waves" />
       </svg>
       <div class='title-principal'>Conoce nuestras instalaciones</div>
-      <svg class="waves">
+      <svg class="lower-waves">
          <use xlink:href="#reversed-waves" />
       </svg>
       <div class='image-full-lenght'>
@@ -183,11 +183,11 @@
 
    <!--CUÁLES SON LOS BENEFICIOS-->
    <section class='flex-content'>
-      <svg class="waves">
+      <svg class="lower-waves">
          <use xlink:href="#normal-waves" />
       </svg>
       <div class='title-principal'>¿Cuáles son los beneficios?</div>
-      <svg class="waves">
+      <svg class="lower-waves">
          <use xlink:href="#reversed-waves" />
       </svg>
       <div class="wrapper">
@@ -246,11 +246,11 @@
 
 <!--NUESTRO EQUIPO-->
 <section class='flex-content'>
-   <svg class="waves">
+   <svg class="lower-waves">
       <use xlink:href="#normal-waves" />
    </svg>
    <div class='title-principal'>Nuestro equipo</div>
-   <svg class="waves">
+   <svg class="lower-waves">
       <use xlink:href="#reversed-waves" />
    </svg>
    <div class="wrapper">
@@ -278,11 +278,11 @@
 
    <!--CONTÁCTANOS-->
    <section class='flex-content'>
-      <svg class="waves">
+      <svg class="lower-waves">
          <use xlink:href="#normal-waves" />
       </svg>
       <div class='title-principal'>Contáctanos</div>
-      <svg class="waves">
+      <svg class="lower-waves">
          <use xlink:href="#reversed-waves" />
       </svg>
       <iframe class='map' src="https://www.google.com/maps/d/embed?mid=1t3ZLb9OtakS-RjF0QR5RSv3N4i6Biyhu&ehbc=2E312F">
@@ -304,7 +304,7 @@
                &nbsp gerencia@flotarium.co
             </div>
             <div class='texto-icons-2' &nbsp<a href="#"><i class="fas fa-phone-square"></i></a>
-               &nbsp 33052816
+               &nbsp 3138934150
             </div>
             <div class='texto-icons-2' &nbsp<a href="#"><i class="fas fa-caret-square-right"></i></a>
                &nbsp La Pradera Dosquebradas
@@ -318,10 +318,10 @@
          <path id="gentle-wave-max" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
       </defs>
       <g class="parallax">
-         <use xlink:href="#gentle-wave-max" x="48" y="0" fill="rgba(43, 104, 101, 1)" />
-         <use xlink:href="#gentle-wave-max" x="48" y="1" fill="rgba(82, 185, 184, 1)" />
-         <use xlink:href="#gentle-wave-max" x="48" y="2" fill="rgba(149, 219, 222)" />
-         <use xlink:href="#gentle-wave-max" x="48" y="3.5" fill="#c3f6f7" />
+         <use xlink:href="#gentle-wave-max" x="48" y="0" fill="var(--fourth-wave)" />
+         <use xlink:href="#gentle-wave-max" x="48" y="1" fill="var(--third-wave)" />
+         <use xlink:href="#gentle-wave-max" x="48" y="2" fill="var(--second-wave)" />
+         <use xlink:href="#gentle-wave-max" x="48" y="3.5" fill="var(--principal-wave)"/>
       </g>
    </svg>
    <footer>

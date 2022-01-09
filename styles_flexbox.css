@@ -1,10 +1,30 @@
   /* ESTILOS TRANSVERSALES */
+:root
+{
+
+   /* PALETA DE COLORES */
+--background-color-up: rgb(32, 102, 99);
+--background-color-down: rgb(0, 0, 0);
+--title-text-color: rgb(5, 70, 59);
+--paragraph-text-color: white;
+--card-color-up:rgb(5, 70, 59);
+--card-color-down:white;
+--icons-color:white;
+/* Para identificar este filtro seleccione un color en formato HEX y conviertalo a filtro aqui: https://codepen.io/sosuke/pen/Pjoqqp */
+--filtro-logo:invert(100%); 
+/* Wave Effect */
+--principal-wave: rgb(215, 252, 253);
+--second-wave: rgb(182, 238, 238);
+--third-wave: rgb(133, 224, 224);
+--fourth-wave: rgb(62, 165, 165);
+}
+
 
 body{
-    background-image: linear-gradient(rgb(0, 0, 0),rgb(61, 126, 124));
+    background-image: linear-gradient(var(--background-color-down),var(--background-color-up));
     background-repeat: no-repeat;
     background-attachment: fixed;
-    font-family: 'Quattrocento Sans', sans-serif;
+    font-family: 'Lato', sans-serif;
   }
   
   .flex-content{
@@ -33,13 +53,11 @@ body{
 
   .texto{
     text-align: justify;
-    font-family: 'Quattrocento Sans', sans-serif;
     padding: 1%;
-    color:white;
+    color:var(--paragraph-text-color);
     max-width: 35%;
     min-width: 300px;
-    text-shadow: 2px 0 10px #fdfdfd;
-    font-size: clamp(1rem,2vw,2.5rem);
+    font-size: clamp(1rem,1.8vw,2rem);
     overflow-wrap: break-word;
   }
 
@@ -52,14 +70,12 @@ body{
 
   .texto-full-lenght{
     text-align: justify;
-    font-family: 'Quattrocento Sans', sans-serif;
     padding: 1%;
     padding-top: 3%;
-    color:white;
+    color:var(--paragraph-text-color);
     max-width: 60%;
     min-width: 300px;
-    text-shadow: 2px 0 10px #fdfdfd;
-    font-size: clamp(1rem,2vw,2.5rem);
+    font-size: clamp(1rem,1.8vw,2rem);
     overflow-wrap: break-word;
   }
 
@@ -68,14 +84,16 @@ body{
     align-items: center;
     justify-content: center;
     width: 100%;
-    font-family: 'Quattrocento Sans', sans-serif;
-    color:rgb(5, 70, 59);
-    text-shadow: 1px 0 1px #ffffff;
+    color: var(--title-text-color);
     font-size: clamp(1.5rem,5vw,2.5rem);
-    background-color: #c3f6f7;
+    font-weight: bolder;
+    background-color: var(--principal-wave);
+    padding-top: 5px;
   }
 
-
+h3{
+  font-size: clamp(1rem,1.8vw,2rem);
+}
 
   /* INTRODUCCION */
 
@@ -160,7 +178,7 @@ body{
 
 
   /* CONOCE NUESTRAS INSTALACIONES */
-  
+
   .parallax > use {
     animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
   }
@@ -189,36 +207,13 @@ body{
     }
   }
   /*Shrinking for mobile*/
-  @media (max-width: 768px) {
-    .waves {
-      height:40px;
-      min-height:40px;
-    }
-    .content {
-      height:30vh;
-    }
-    h1 {
-      font-size:24px;
-    }
-  }
 
-  @media only screen and (max-width: 550px)
-{
-  .gallery-wrap {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 70vh;
-  }
-
-}
 
 .gallery-wrap {
   display: flex;
   flex-direction: row;
   width: 100%;
   height: 70vh;
-  border-radius: 5%;
 }
 
 .item:hover {
@@ -254,6 +249,24 @@ body{
   background-image: url("graphics/flotarium_images_reduced/20210927163530_opt.jpg");
 }
 
+@media (max-width: 550px)
+{
+  .gallery-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 40vh;
+  }
+
+  .image-full-lenght{
+    padding: 25px 0;
+    margin: 0 auto;
+    width: 75%;
+    height: 85%;
+  }
+
+}
+
 /* BENEFICIOS */
 
 *{
@@ -266,7 +279,6 @@ body{
 h1{
   padding: 5%;
   font-size: 2.5rem;
-  font-family: 'Quattrocento Sans';
   font-weight: normal;
   color: rgb(255, 255, 255);
   text-align: center;
@@ -326,9 +338,9 @@ h1{
 
 .back{
   background: #cedce7;
-  background: -webkit-linear-gradient(45deg,  #cedce7 0%,#216e70 100%);
-  background: -o-linear-gradient(45deg,  #cedce7 0%,#216e70 100%);
-  background: linear-gradient(45deg,  #cedce7 0%,#216e70 100%);
+  background: -webkit-linear-gradient(45deg,  var(--card-color-down) 0%, var(--card-color-up) 100%);
+  background: -o-linear-gradient(45deg,  var(--card-color-down) 0%, var(--card-color-up) 100%);
+  background: linear-gradient(45deg,  var(--card-color-down) 0%, var(--card-color-up) 100%);
 }
 
 .front:after{
@@ -376,7 +388,6 @@ h1{
     -webkit-perspective: inherit;
             perspective: inherit;
     z-index: 2;
-    font-family: 'Quattrocento Sans';
 }
 
 .container .back{
@@ -411,7 +422,6 @@ h1{
   font-size: 2rem;
   margin-bottom: 2rem;
   position: relative;
-  font-family: 'Quattrocento Sans';
 }
 
 .front .inner p:after{
@@ -428,30 +438,24 @@ h1{
 }
 
 .front .inner span{
-  color: rgba(255, 255, 255, 0.418);
-  font-family: 'Quattrocento Sans';
+  color: rgba(255,255,255,0.7);
   font-weight: 300;
-}
-
-.front .inner2 span{
-  color: rgb(5, 0, 0);
-  font-family: 'Quattrocento Sans';
-  font-weight: 800;
-  position: fixed;
-  bottom:5%
-  
 }
 
 @media screen and (max-width: 64rem){
   .col{
     width: calc(33.333333% - 2rem);
   }
+
+  
 }
 
 @media screen and (max-width: 48rem){
   .col{
     width: calc(50% - 2rem);
   }
+
+  
 }
 
 @media screen and (max-width: 32rem){
@@ -459,42 +463,44 @@ h1{
     width: 100%;
     margin: 0 0 2rem 0;
   }
+
 }
 
 
   /* CONTÁCTANOS */
 
   .map{
-    width: 50vh;
-    height: 50vh;
+    width: 45vh;
+    height: 45vh;
     justify-content: center
   }
   
   .texto-icons{
     text-align: center;
-    font-family: 'Quattrocento Sans', sans-serif;
     padding: 2%;
-    color:white;
+    color:var(--icons-color);
     max-width: 35%;
-    min-width: 300px;
+    min-width: 380px;
     font-size: clamp(1rem,2vw,2.5rem);
   }
 
   .texto-icons-2{
     display:flex;
     align-items: center;
+    padding: 2%;
+    min-width: 100%
   }
 
   .fab
   {
-    color: white;
+    color: var(--icons-color);
     font-size: clamp(2rem,4vw,5rem);
     text-align: center;
   }
 
   .fas
   {
-    color: white;
+    color: var(--icons-color);
     font-size: clamp(2rem,4vw,5rem);
     text-align: center;
   }
@@ -503,7 +509,6 @@ h1{
 
   footer{
     text-align: center;
-    font-family: 'Quattrocento Sans', sans-serif;
     padding: 5%;
     padding-top: 3%;
     color:rgb(0, 0, 0);
@@ -511,7 +516,7 @@ h1{
     min-width: 200px;
     font-size: clamp(1rem,2vw,2.5rem);
     overflow-wrap: break-word;
-    background-color: #c3f6f7;
+    background-color: var(--principal-wave);
   }
 
   
@@ -524,6 +529,15 @@ h1{
     max-height:150px;
   }
   
+    
+  .lower-waves {
+    width: 100%;
+    height:5vh;
+    margin-bottom:-7px; /*Fix for safari gap*/
+    min-height:50px;
+    max-height:150px;
+  }
+  
   .content {
     position:relative;
     height:20vh;
@@ -531,4 +545,16 @@ h1{
     background-color: white;
   }
   
+  @media (max-width: 768px) {
 
+    .waves {
+      height:40px;
+      min-height:40px;
+    }
+    .content {
+      height:30vh;
+    }
+    h1 {
+      font-size:24px;
+    }
+  }
