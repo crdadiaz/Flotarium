@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Flotarium</title>
+
+   <!-- TIPOGRAFIA-->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+
+   <!-- ESTILOS-->
+   <link href="styles_flexbox.css" rel="stylesheet">
+
+   <!-- FILTROS SVG-->
+   <svg>
+      <filter id="turbulence" x="0" y="0.1">
+         <feTurbulence id="sea-filter" numOctaves="3" seed="1" baseFrequency="0.02 0.05"></feTurbulence>
+         <feDisplacementMap scale="8" in="SourceGraphic"></feDisplacementMap>
+         <animate xlink:href="#sea-filter" attributeName="baseFrequency" dur="50s" keyTimes="0;0.5;1"
+            values="0.02 0.15;0.04 0.08;0.05 0.06" repeatCount="indefinite" />
+         <animate xlink:href="#sea-filter" attributeName="baseFrequency" dur="50s" keyTimes="0;0.5;1"
+            values="0.02 0.15;0.04 0.08;0.05 0.06" repeatCount="indefinite" />
+      </filter>
+   </svg>
+
+   <!-- SCRIPTS-->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+   <!--FONT AWESOME-->   <!--ICONOS-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <div class="jm-loadingpage">
+        <div class="circle">
+           <div class="wave"></div>
+        </div>
+     </div>
+</body>
