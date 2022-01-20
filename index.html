@@ -5,7 +5,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
+   <title>Flotarium</title>
 
    <!-- TIPOGRAFIA-->
    <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,31 +15,9 @@
    <!-- ESTILOS-->
    <link href="styles_flexbox.css" rel="stylesheet">
 
-   <!-- FILTROS SVG-->
-   <svg>
-      <filter id="turbulence" x="0" y="0.1" width="100%" height="99%">
-         <feTurbulence id="sea-filter" numOctaves="3" seed="1" baseFrequency="0.02 0.05"></feTurbulence>
-         <feDisplacementMap scale="8" in="SourceGraphic"></feDisplacementMap>
-         <animate xlink:href="#sea-filter" attributeName="baseFrequency" dur="50s" keyTimes="0;0.5;1"
-            values="0.02 0.15;0.04 0.08;0.05 0.06" repeatCount="indefinite" />
-         <animate xlink:href="#sea-filter" attributeName="baseFrequency" dur="50s" keyTimes="0;0.5;1"
-            values="0.02 0.15;0.04 0.08;0.05 0.06" repeatCount="indefinite" />
-      </filter>
-   </svg>
 
    <!-- SCRIPTS-->
-   <script type="text/javascript">
-      document.addEventListener("mousemove", parallax);
-      function parallax(e) {
-
-         this.querySelectorAll('.Prologo_Images_Background').forEach(layer => {
-            const speed = layer.getAttribute('data-speed')
-            const x = (window.innerWidth - (e.pageX * speed)) / 100
-            layer.style.transform = `translateX(${x}px)`
-         })
-      }
-
-   </script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
    <!--FONT AWESOME-->   <!--ICONOS-->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
@@ -49,15 +27,46 @@
 </head>
 
 <body>
+     <div class="jm-loadingpage">
+      <div class="circle">
+         <div class="wave"></div>
+      </div>
+   </div>
+
    <!--ENCABEZADO-->
    <section class='logo-flex-content'>
       <div>
          <img src="graphics/logos/logo-flotarium_1.svg" class="logo" loading="lazy" alt="logo flotarium">
-      </div>
-   </section>
+ </div>
+ </section>
 
+   <!--NAVBAR-->
+   <div class="navbar">
+         <div class="dropdown">
+            <section class='logo-flex-content'>
+               <div>
+                  <img src="graphics/logo/logo-flotarium_1.svg" alt="logo flotarium" class="logo">
+               </div>
+            </section>
+         </div> 
+         <svg class="waves-navbar" id="normal-waves-navbar" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+               <path id="gentle-wave-max" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+               <use xlink:href="#gentle-wave-max" x="48" y="0" fill="var(--second-wave-navbar)" />
+               <use xlink:href="#gentle-wave-max" x="48" y="1" fill="var(--third-wave-navbar)" />
+               <use xlink:href="#gentle-wave-max" x="48" y="2" fill="var(--fourth-wave-navbar)" />
+               <use xlink:href="#gentle-wave-max" x="48" y="3.5" fill="var(--reversed-wave-navbar)"/>
+            </g>
+         </svg>
+
+    </div>
+
+   <!--ENCABEZADO-->
 
    <!--INTRODUCCION-->
+   
    <div class='introduction'>
       <img src="graphics/main image/skybackground.png" data-speed="0" class="Prologo_Images_Block_Background" loading="lazy" alt="Cielo_fondo">
       <img src="graphics/main image/seabackground.png" data-speed="3.5" class="Prologo_Images_Block_Background" loading="lazy" alt="Oceano_fondo">
@@ -191,7 +200,7 @@
       <div class="wrapper">
          <div class="cols">
             <div class="col" ontouchstart="this.classList.toggle('hover');">
-               <div class="container">
+               <div class="container" input type="checkbox">
                   <div class="front" style="background-image: url('graphics/benefits_images/espirituales.jpg')">
                      <div class="inner">
                         <p>Espirituales</p>
@@ -276,7 +285,7 @@
          suscipit c..Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae
          suscipit c..Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae
          suscipit c..</p>
-    
+   
       </div>
     </aside>
     <aside class="profile-card">
@@ -359,6 +368,36 @@
    <footer>
     <img: src="graphics/logos/logo_dustrad_1.svg" class="logo_dustrad" loading="lazy" alt="logo Dustrad"> Dustrad Technologies | 2021 | www.dustrad.com.co
    </footer>
+   <script>
+      $(document).ready(function() {
+  // Images loaded is zero because we're going to process a new set of images.
+  var imagesLoaded = 0;
+  // Total images is still the total number of <img> elements on the page.
+  var totalImages = $("img").length;
+
+  // Step through each image in the DOM, clone it, attach an onload event
+  // listener, then set its source to the source of the original image. When
+  // that new image has loaded, fire the imageLoaded() callback.
+  $("img").each(function (idx, img) {
+    $("<img>").on("load", imageLoaded).attr("src", $(img).attr("src"));
+  });
+
+  // Do exactly as we had before -- increment the loaded count and if all are
+  // loaded, call the allImagesLoaded() function.
+  function imageLoaded() {
+    imagesLoaded++;
+    if (imagesLoaded == totalImages) {
+      allImagesLoaded();
+    }
+  }
+
+  function allImagesLoaded() {
+   $(".jm-loadingpage").fadeOut("slow");;
+  }
+      });
+      </script>
 </body>
+
+
 
 </html>
