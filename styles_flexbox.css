@@ -163,62 +163,157 @@ h3{
   font-size: clamp(1rem,1.8vw,2rem);
 }
 
-  /* NAVBAR */
+/* NAVBAR */
 
-.navbar{
-display: flex;
-justify-content: center;
-flex-flow: row wrap;
-align-items: center;
-background-color: var(--principal-wave);
+.menu_bar {
+	display:none;
 }
 
-/* Dropdown Button */
-.dropbtn {
-  background-color: #04AA6D;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
+header {
+	width: 100%;
+	font-weight: bolder;
+
 }
 
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: right;
+header nav {
+	background:var(--principal-wave);
+	z-index:1000;
+	max-width: 1000px;
+	width:95%;
+	margin:20px auto;
 }
 
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+header nav ul {
+	list-style:none;
 }
 
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+header nav ul li {
+	display:inline-block;
+	position: relative;
 }
 
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
+header nav ul li:hover {
+	background:var(--fourth-wave);
+}
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
+header nav ul li a {
+	color:rgb(255, 255, 255);
+	display:block;
+	text-decoration:none;
+	padding: 20px;
+}
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+header nav ul li a span {
+	margin-right:10px;
+}
+
+header nav ul li:hover .children {
+	display:block;
+}
+
+header nav ul li .children {
+	display: none;
+	background:var(--principal-wave);
+	position: absolute;
+	width: 150%;
+	z-index:1000;
+}
+
+header nav ul li .children li {
+	display:block;
+	overflow: hidden;
+	border-bottom: 1px solid rgba(255,255,255,.5);
+}
+
+header nav ul li .children li a {
+	display: block;
+}
+
+header nav ul li .children li a span {
+	float: right;
+	position: relative;
+	top:3px;
+	margin-right:0;
+	margin-left:10px;
+}
+
+header nav ul li .fas {
+	position: relative;
+	font-size: clamp(1rem,1vw,2.5rem);
+	top:3px;
+	margin-left:10px;
+	margin-right:0px;
+	color: rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 800px) {
+	body {
+		padding-top:80px;
+	}
+
+	.menu_bar {
+		display:block;
+		width:100%;
+		position: fixed;
+		top:0;
+		background:var(--principal-wave);
+	}
+
+	.menu_bar .bt-menu {
+		display: block;
+		padding: 20px;
+		color: rgb(255, 255, 255);
+		overflow: hidden;
+		font-size: 25px;
+		font-weight: bolder
+		text-decoration: none;
+	}
+
+	.menu_bar span {
+		float: right;
+		font-size: 40px;
+		color: rgb(255, 255, 255);
+	}
+
+	header nav {
+		width: 80%;
+		height: calc(100% - 80px);
+		position: fixed;
+		right:100%;
+		margin: 0;
+		overflow: scroll;
+	}
+
+	header nav ul li {
+		display: block;
+		border-bottom:1px solid rgba(255,255,255,.5);
+	}
+
+	header nav ul li a {
+		display: block;
+	}
+
+	header nav ul li:hover .children {
+		display: none;
+	}
+
+	header nav ul li .children {
+		width: 100%;
+		position: relative;
+	}
+
+	header nav ul li .children li a {
+		margin-left:20px;
+	}
+
+	header nav ul li .fas{
+		float: right;
+	}
+}
+/* NAVBAR */
 
 
-
-
-  /* INTRODUCCION */
-
+/* INTRODUCCION */
   .logo{
     display: flex;
     justify-content: center;
@@ -388,7 +483,7 @@ background-color: var(--principal-wave);
     flex-direction: column;
     width: 100%;
     height: 40vh;
-  }
+}
 
   .image-full-lenght{
     padding: 25px 0;
@@ -405,8 +500,8 @@ background-color: var(--principal-wave);
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
+  box-sizing: border-box;
+ }
 
 h1{
   padding: 5%;
@@ -415,7 +510,7 @@ h1{
   color: rgb(10, 10, 10);
   text-align: center;
   margin: 2rem 0;
-}
+ }
 
 .wrapper{
   width: 90%;
@@ -442,9 +537,9 @@ h1{
 }
 
 .container{
-  -webkit-transform-style: preserve-3d;
+   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-	-webkit-perspective: 1000px;
+    -webkit-perspective: 1000px;
 	        perspective: 1000px;
 }
 
@@ -608,9 +703,9 @@ h1{
   .col{
     width: 100%;
     margin: 0 0 2rem 0;
-  }
+}
 
-  .col2{
+.col2{
     width: 100%;
     margin: 0 0 2rem 0;
   }
@@ -626,7 +721,7 @@ h1{
   }
 }
 
-  /* CONTÁCTANOS */
+/* CONTÁCTANOS */
 
   .map{
     width: 45vh;
@@ -740,7 +835,7 @@ h1{
   }
 
 
-  /* go on then, styles go here.. knock yourself out! */
+/* go on then, styles go here.. knock yourself out! */
 
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 
@@ -917,6 +1012,7 @@ aside:hover .profile-bio {
     transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
   }
 }
+
 /*NAME ANIMATE */
 
 aside:hover header h1 {
@@ -999,7 +1095,8 @@ aside:hover ul li:nth-child(3) {
   animation-delay: 1.25s;
 }
 
-  /*Loading page*/
+/*LOADING PAGE*/
+
 .jm-loadingpage {
   position: fixed;
   left: 0px;
