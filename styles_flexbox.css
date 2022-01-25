@@ -17,14 +17,17 @@
   --fourth-wave: rgb(209, 222, 241);
   --reversed-wave:rgb(255, 255, 255);
  /* Wave Effect Navbar */
-  --principal-wave-navbar: rgb(0, 50, 90);
-  --second-wave-navbar: rgb(71, 114, 150,.5);
+  --principal-wave-navbar: rgb(255, 255, 255);
+  --second-wave-navbar: rgba(255, 255, 255, 0.5);
   --third-wave-navbar: rgb(147, 191, 228,.5);
   --fourth-wave-navbar: rgb(209, 222, 241,.5);
   --reversed-wave-navbar:rgb(255, 255, 255);
   /* Efectos Prologo */
-  --prologue-width: 40%;
-  --filtro-prologo:hue-rotate(128deg);
+  --prologue-width: 65%;
+  --filtro-prologo:hue-rotate(0deg);
+  --prologue-width-mobile: 90%;
+  --prologue-width-height: 90%;
+  --filtro-prologo-mobile:hue-rotate(0deg);
 }
 
 
@@ -237,18 +240,27 @@ background-color: var(--principal-wave);
   }
 
   .Prologo_Image_Not_Absolute{
-    height: auto;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-image: url("graphics/main_image_desktop/background_2.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
     display: block;
     margin-left: auto;
     margin-right: auto;
     left:0;
     right:0;
-    width: var(--prologue-width);
+    width: 30%;
     filter: var(--filtro-prologo);
-    min-width: 300px;
+    min-width: 200px;
   }
 
   .Prologo_Images_Block_Background{
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-image: url("graphics/main_image_desktop/background_desktop_10.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
     position: absolute;
     height: auto;
     display: block;
@@ -259,35 +271,14 @@ background-color: var(--principal-wave);
     filter: var(--filtro-prologo);
     width: var(--prologue-width);
     min-width: 300px;
-  }
-
-  .Prologo_Images_Background{
-    position: absolute;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    left:0;
-    right:0;
-    filter: var(--filtro-prologo);
-    width:var(--prologue-width);
-    min-width: 300px;
-  }
-
-  .Prologo_Images_Background_2{
-    position: absolute;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    left:0;
-    right:0;
-    filter: var(--filtro-prologo);
-    width: var(--prologue-width);
-    min-width: 300px;
-  }
+    }
 
   .Prologo_Images_Block_Background_with_filter{
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-image: url("graphics/main_image_desktop/sea_2.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
   position: absolute;
   height: auto;
   display: block;
@@ -298,6 +289,22 @@ background-color: var(--principal-wave);
   filter: var(--filtro-prologo) url(#turbulence);
   width: var(--prologue-width);
   min-width: 300px;
+  }
+
+  @media (max-width: 550px)
+  {¨
+
+    .Prologo_Image_Not_Absolute{
+      background-image: url("graphics/main_image/background.png");
+    }
+    .Prologo_Images_Block_Background{ 
+      background-image: url("graphics/main_image/skybackground3.png");
+    }
+  
+    .Prologo_Images_Block_Background_with_filter{
+      background-image: url("graphics/main_image/seabackground2.png");
+      filter: var(--filtro-prologo) url(#turbulence);
+    }
   }
 
 
@@ -659,28 +666,23 @@ h1{
 
  /* FOOTER */
 
-  footer {
-    text-align: center;
+  footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 5%;
-    padding-top: 3%;
+    padding-top: 5%;
     color:var(--title-text-color);
-    font-weight: bolder;
     max-width: 100%;
     min-width: 200px;
-    font-size: clamp(1rem,2vw,2.5rem);
+    font-size: clamp(.75rem,2vw,2rem);
     overflow-wrap: break-word;
     background-color: var(--principal-wave);
   }
 
-  .logo-dustrad {
-    display: flex;
-    justify-content: center;
-    margin-top: -130px;
+  .logo-dustrad{
     filter:invert(100%);
-    width: 60%;
-    min-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 3%;
   }
   
   .waves {
@@ -695,9 +697,8 @@ h1{
   .waves-navbar{
     position:relative;
     width: 100%;
-    height:15vh;
+    height:7vh;
     margin-bottom:-7px; /*Fix for safari gap*/
-    min-height:100px;
     max-height:150px;
   }
     

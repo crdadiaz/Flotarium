@@ -19,70 +19,70 @@
    <!-- SCRIPTS-->
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-   <!--FONT AWESOME-->   <!--ICONOS-->
+   <!--FONT AWESOME-->
+   <!--ICONOS-->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
       integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-</head>
+
+   <!-- FILTROS SVG-->
+   <svg style="display: none;">
+      <filter id="turbulence">
+         <feTurbulence id="sea-filter" numOctaves="3" seed="1" baseFrequency="0.02 0.05"></feTurbulence>
+         <feDisplacementMap scale="8" in="SourceGraphic"></feDisplacementMap>
+         <animate xlink:href="#sea-filter" attributeName="baseFrequency" dur="50s" keyTimes="0;0.5;1"
+            values="0.02 0.15;0.04 0.08;0.05 0.06" repeatCount="indefinite" />
+         <animate xlink:href="#sea-filter" attributeName="baseFrequency" dur="50s" keyTimes="0;0.5;1"
+            values="0.02 0.15;0.04 0.08;0.05 0.06" repeatCount="indefinite" />
+      </filter>
+   </svg>
 
 <body>
-     <div class="jm-loadingpage">
+
+   <div class="jm-loadingpage">
       <div class="circle">
          <div class="wave"></div>
       </div>
    </div>
 
-   <!--ENCABEZADO-->
-   <section class='logo-flex-content'>
-      <div>
-         <img src="graphics/logos/logo-flotarium_1.svg" class="logo" loading="lazy" alt="logo flotarium">
- </div>
- </section>
-
    <!--NAVBAR-->
    <div class="navbar">
-         <div class="dropdown">
-            <section class='logo-flex-content'>
-               <div>
-                  <img src="graphics/logo/logo-flotarium_1.svg" alt="logo flotarium" class="logo">
-               </div>
-            </section>
-         </div> 
-         <svg class="waves-navbar" id="normal-waves-navbar" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-            <defs>
-               <path id="gentle-wave-max" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-            </defs>
-            <g class="parallax">
-               <use xlink:href="#gentle-wave-max" x="48" y="0" fill="var(--second-wave-navbar)" />
-               <use xlink:href="#gentle-wave-max" x="48" y="1" fill="var(--third-wave-navbar)" />
-               <use xlink:href="#gentle-wave-max" x="48" y="2" fill="var(--fourth-wave-navbar)" />
-               <use xlink:href="#gentle-wave-max" x="48" y="3.5" fill="var(--reversed-wave-navbar)"/>
-            </g>
-         </svg>
+      <div class="dropdown">
+         <section class='logo-flex-content'>
+            <div>
+               <img src="graphics/logos/logo-flotarium_1.svg" class="logo" loading="lazy" alt="logo flotarium">
+            </div>
+         </section>
+      </div>
+      <svg class="waves-navbar" id="normal-waves-navbar" viewBox="0 24 150 28" preserveAspectRatio="none"
+         shape-rendering="auto">
+         <defs>
+            <path id="gentle-wave-max" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+         </defs>
+         <g class="parallax">
+            <use xlink:href="#gentle-wave-max" x="48" y="0" fill="var(--second-wave-navbar)" />
+            <use xlink:href="#gentle-wave-max" x="48" y="1" fill="var(--third-wave-navbar)" />
+            <use xlink:href="#gentle-wave-max" x="48" y="2" fill="var(--fourth-wave-navbar)" />
+            <use xlink:href="#gentle-wave-max" x="48" y="3.5" fill="var(--reversed-wave-navbar)" />
+         </g>
+      </svg>
 
-    </div>
+   </div>
 
    <!--ENCABEZADO-->
 
    <!--INTRODUCCION-->
-   
    <div class='introduction'>
-      <img src="graphics/main image/skybackground.png" data-speed="0" class="Prologo_Images_Block_Background" loading="lazy" alt="Cielo_fondo">
-      <img src="graphics/main image/seabackground.png" data-speed="3.5" class="Prologo_Images_Block_Background" loading="lazy" alt="Oceano_fondo">
-      <img src="graphics/main image/seabackground2.png" data-speed="3.5" class="Prologo_Images_Block_Background_with_filter" loading="lazy" alt="Oceano_fondo_efectos">
-      <img src="graphics/main image/mountain0.png" data-speed="0" class="Prologo_Images_Background" loading="lazy" alt="Montaña_0">
-      <img src="graphics/main image/mountain1.png" data-speed="-4" class="Prologo_Images_Background" loading="lazy" alt="Montaña_1">
-      <img src="graphics/main image/mountain3.png" data-speed="5" class="Prologo_Images_Background" loading="lazy" alt="Montaña_2">
-      <img src="graphics/main image/background.png" data-speed="0" class="Prologo_Image_Not_Absolute" loading="lazy" alt="Marco_fondo">
+      <img class="Prologo_Images_Block_Background" src="graphics/others/empty_background.png" loading="lazy" alt="Cielo_fondo">
+      <img class="Prologo_Images_Block_Background_with_filter" src="graphics/others/empty_background.png" loading="lazy" alt="Cielo_fondo">
+      <img class="Prologo_Image_Not_Absolute" src="graphics/others/empty_background.png" loading="lazy" alt="Cielo_fondo">
    </div>
-
-
-
 
    <!--QUÉ ES FLOTARIUM-->
    <section class='flex-content'>
-      <svg class="lower-waves" id="normal-waves" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <svg class="lower-waves" id="normal-waves" viewBox="0 24 150 28" preserveAspectRatio="none"
+         shape-rendering="auto">
          <defs>
             <path id="gentle-wave" d="M-160 44c30 0 58-5 88-5s 58 5 88 5 58-5 88-5 58 5 88 5 v44h-352z" />
          </defs>
@@ -90,11 +90,12 @@
             <use xlink:href="#gentle-wave" x="48" y="0" fill="var(--fourth-wave)" />
             <use xlink:href="#gentle-wave" x="48" y="1" fill="var(--third-wave)" />
             <use xlink:href="#gentle-wave" x="48" y="2" fill="var(--second-wave)" />
-            <use xlink:href="#gentle-wave" x="48" y="3.5" fill="var(--principal-wave)"/>
+            <use xlink:href="#gentle-wave" x="48" y="3.5" fill="var(--principal-wave)" />
          </g>
       </svg>
       <div class='title-principal'>¿Qué es Flotarium?</div>
-      <svg class="lower-waves" id="reversed-waves" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <svg class="lower-waves" id="reversed-waves" viewBox="0 24 150 28" preserveAspectRatio="none"
+         shape-rendering="auto">
          <defs>
             <path id="gentle-waves" d="M-160 30c44 0 58-5 88-5s 58 5 88 5 58-5 88-5 58 5 88 5 h44v-352z" />
          </defs>
@@ -102,11 +103,12 @@
             <use xlink:href="#gentle-waves" x="48" y="0" fill="var(--fourth-wave)" />
             <use xlink:href="#gentle-waves" x="48" y="1" fill="var(--third-wave)" />
             <use xlink:href="#gentle-waves" x="48" y="2" fill="var(--second-wave)" />
-            <use xlink:href="#gentle-waves" x="48" y="3.5" fill="var(--principal-wave)"/>
+            <use xlink:href="#gentle-waves" x="48" y="3.5" fill="var(--principal-wave)" />
          </g>
       </svg>
       <div class='imagen-container'>
-         <img src="graphics/flotarium_images_reduced/20210927182711_opt.jpg" class='imagen' loading="lazy" alt="Publicidad_Flotarium_1">
+         <img src="graphics/flotarium_images_reduced/20210927182711_opt.jpg" class='imagen' loading="lazy"
+            alt="Publicidad_Flotarium_1">
       </div>
       <div class='texto'>
          Es un tanque de privación sensorial que contiene una solución de agua y sulfato de magnesio (sal Epsom) con
@@ -127,11 +129,15 @@
       <svg class="lower-waves">
          <use xlink:href="#reversed-waves" />
       </svg>
-      <div class='texto'>El tanque de aislamiento sensorial contiene en su interior 600 litros de agua y 300 kilos de sales Epsom o sulfato de magnesio (un compuesto químico conocido con la fórmula Mg SO4·7H2O). De esta forma, se consigue crear una densidad como la del Mar Muerto donde cualquier intento de sumergirse se ve frustrado ya que el cuerpo flota sin ningún tipo de esfuerzo. 
-         Se pierde la noción del peso del cuerpo. 
-         La temperatura del agua oscila entre los 35º y los 37.5º C, de esta forma no se siente ni frío ni calor. 
+      <div class='texto'>El tanque de aislamiento sensorial contiene en su interior 600 litros de agua y 300 kilos de
+         sales Epsom o sulfato de magnesio (un compuesto químico conocido con la fórmula Mg SO4·7H2O). De esta forma, se
+         consigue crear una densidad como la del Mar Muerto donde cualquier intento de sumergirse se ve frustrado ya que
+         el cuerpo flota sin ningún tipo de esfuerzo.
+         Se pierde la noción del peso del cuerpo.
+         La temperatura del agua oscila entre los 35º y los 37.5º C, de esta forma no se siente ni frío ni calor.
          La persona que entra en el tanque tiene la sensación de que su cuerpo se funde con el agua.</div>
-      <div class='imagen-container'><img src="graphics/flotarium_images_reduced/20210927162431_opt.jpg" class='imagen' loading="lazy" alt="Publicidad_Flotarium_2">
+      <div class='imagen-container'><img src="graphics/flotarium_images_reduced/20210927162431_opt.jpg" class='imagen'
+            loading="lazy" alt="Publicidad_Flotarium_2">
       </div>
    </section>
 
@@ -251,83 +257,86 @@
       </div>
    </section>
 
-<!--NUESTRO EQUIPO-->
-<section class='flex-content'>
-   <svg class="lower-waves">
-      <use xlink:href="#normal-waves" />
-   </svg>
-   <div class='title-principal'>Nuestro equipo</div>
-   <svg class="lower-waves">
-      <use xlink:href="#reversed-waves" />
-   </svg>
-   <aside class="profile-card">
+   <!--NUESTRO EQUIPO-->
+   <section class='flex-content'>
+      <svg class="lower-waves">
+         <use xlink:href="#normal-waves" />
+      </svg>
+      <div class='title-principal'>Nuestro equipo</div>
+      <svg class="lower-waves">
+         <use xlink:href="#reversed-waves" />
+      </svg>
+      <aside class="profile-card">
 
-      <header>
-      <!--PERFILES INDIVIDUALES EQUIPO FLOTARIUM-->
-        <!--  avatar -->
-        <a>
-          <img src="/graphics/equipo_images/pp.jpg" loading="lazy" alt="Perfil_Flotarium_1">
-        </a>
-    
-        <!-- the username -->
-        <h1>Jhonnathan Porras</h1>
-    
-        <!-- and role or location -->
-        <h2>- Coaching Espiritual -</h2>
-    
-      </header>
-    
-      <!-- bit of a bio; who are you? -->
-      <div class="profile-bio">
-    
-        <p>Hello there!</p>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae
-         suscipit c..Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae
-         suscipit c..Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae
-         suscipit c..</p>
-   
-      </div>
-    </aside>
-    <aside class="profile-card">
+         <header>
+            <!--PERFILES INDIVIDUALES EQUIPO FLOTARIUM-->
+            <!--  avatar -->
+            <a>
+               <img src="/graphics/equipo_images/pp.jpg" loading="lazy" alt="Perfil_Flotarium_1">
+            </a>
 
-      <header>
-    
-        <!--  avatar -->
-        <a>
-          <img src="/graphics/equipo_images/pp.jpg" loading="lazy" alt="Perfil_Flotarium_2">
-        </a>
-    
-        <!-- the username -->
-        <h1>Jhonnathan Porras</h1>
-    
-        <!-- and role or location -->
-        <h2>- Coaching Espiritual -</h2>
-    
-      </header>
-    
-      <!-- bit of a bio; who are you? -->
-      <div class="profile-bio">
-    
-        <p>Hello there!</p>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae
-         suscipit c..Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae
-         suscipit c..Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae
-         suscipit c..</p>
-    
-      </div>
-    </aside>
-    
-</section>
+            <!-- the username -->
+            <h1>Jhonnathan Porras</h1>
+
+            <!-- and role or location -->
+            <h2>- Coaching Espiritual -</h2>
+
+         </header>
+
+         <!-- bit of a bio; who are you? -->
+         <div class="profile-bio">
+
+            <p>Hello there!</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae
+               suscipit c..Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae
+               suscipit c..Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae
+               suscipit c..</p>
+
+         </div>
+      </aside>
+      <aside class="profile-card">
+
+         <header>
+
+            <!--  avatar -->
+            <a>
+               <img src="/graphics/equipo_images/pp.jpg" loading="lazy" alt="Perfil_Flotarium_2">
+            </a>
+
+            <!-- the username -->
+            <h1>Jhonnathan Porras</h1>
+
+            <!-- and role or location -->
+            <h2>- Coaching Espiritual -</h2>
+
+         </header>
+
+         <!-- bit of a bio; who are you? -->
+         <div class="profile-bio">
+
+            <p>Hello there!</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae
+               suscipit c..Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae
+               suscipit c..Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae
+               suscipit c..</p>
+
+         </div>
+      </aside>
+
+   </section>
 
 
    <!--CONTÁCTANOS-->
    <section class='flex-content'>
       <svg class="lower-waves">
-         <use xlink:href="#normal-waves" /></svg>
+         <use xlink:href="#normal-waves" />
+      </svg>
       <div class='title-principal'>Contáctanos</div>
       <svg class="lower-waves">
-         <use xlink:href="#reversed-waves" /></svg>
-      <iframe class='map' src="https://www.google.com/maps/d/embed?mid=1t3ZLb9OtakS-RjF0QR5RSv3N4i6Biyhu&ehbc=2E312F" loading="lazy"></iframe>
+         <use xlink:href="#reversed-waves" />
+      </svg>
+      <iframe class='map' src="https://www.google.com/maps/d/embed?mid=1t3ZLb9OtakS-RjF0QR5RSv3N4i6Biyhu&ehbc=2E312F"
+         loading="lazy"></iframe>
       <div class='texto-icons'>
          <br>
          <h3>¡Síguenos!</h3>
@@ -341,13 +350,13 @@
          <h3>Habla con nosotros:</h3>
          <br>
          <div>
-            <div class='texto-icons-2' &nbsp<a href="#"><i class="fas fa-envelope-square"></i></a>
+            <div class='texto-icons-2' <a href="#"><i class="fas fa-envelope-square"></i></a>
                &nbsp gerencia@flotarium.co
             </div>
-            <div class='texto-icons-2' &nbsp<a href="#"><i class="fas fa-phone-square"></i></a>
+            <div class='texto-icons-2' <a href="#"><i class="fas fa-phone-square"></i></a>
                &nbsp 3138934150
             </div>
-            <div class='texto-icons-2' &nbsp<a href="#"><i class="fas fa-caret-square-right"></i></a>
+            <div class='texto-icons-2' <a href="#"><i class="fas fa-caret-square-right"></i></a>
                &nbsp La Pradera Dosquebradas
             </div>
          </div>
@@ -362,40 +371,42 @@
          <use xlink:href="#gentle-wave-max" x="48" y="0" fill="var(--fourth-wave)" />
          <use xlink:href="#gentle-wave-max" x="48" y="1" fill="var(--third-wave)" />
          <use xlink:href="#gentle-wave-max" x="48" y="2" fill="var(--second-wave)" />
-         <use xlink:href="#gentle-wave-max" x="48" y="3.5" fill="var(--principal-wave)"/>
+         <use xlink:href="#gentle-wave-max" x="48" y="3.5" fill="var(--principal-wave)" />
       </g>
    </svg>
    <footer>
-    <img: src="graphics/logos/logo_dustrad_1.svg" class="logo_dustrad" loading="lazy" alt="logo Dustrad"> Dustrad Technologies | 2021 | www.dustrad.com.co
+         <img src="graphics/logos/logo_dustrad_1.svg" class="logo-dustrad" loading="lazy" alt="logo Dustrad"> &nbsp Dustrad
+         Technologies | 2021 | www.dustrad.com.co
    </footer>
+
    <script>
-      $(document).ready(function() {
-  // Images loaded is zero because we're going to process a new set of images.
-  var imagesLoaded = 0;
-  // Total images is still the total number of <img> elements on the page.
-  var totalImages = $("img").length;
+      $(document).ready(function () {
+         // Images loaded is zero because we're going to process a new set of images.
+         var imagesLoaded = 0;
+         // Total images is still the total number of <img> elements on the page.
+         var totalImages = $("img").length;
 
-  // Step through each image in the DOM, clone it, attach an onload event
-  // listener, then set its source to the source of the original image. When
-  // that new image has loaded, fire the imageLoaded() callback.
-  $("img").each(function (idx, img) {
-    $("<img>").on("load", imageLoaded).attr("src", $(img).attr("src"));
-  });
+         // Step through each image in the DOM, clone it, attach an onload event
+         // listener, then set its source to the source of the original image. When
+         // that new image has loaded, fire the imageLoaded() callback.
+         $("img").each(function (idx, img) {
+            $("<img>").on("load", imageLoaded).attr("src", $(img).attr("src"));
+         });
 
-  // Do exactly as we had before -- increment the loaded count and if all are
-  // loaded, call the allImagesLoaded() function.
-  function imageLoaded() {
-    imagesLoaded++;
-    if (imagesLoaded == totalImages) {
-      allImagesLoaded();
-    }
-  }
+         // Do exactly as we had before -- increment the loaded count and if all are
+         // loaded, call the allImagesLoaded() function.
+         function imageLoaded() {
+            imagesLoaded++;
+            if (imagesLoaded == totalImages) {
+               allImagesLoaded();
+            }
+         }
 
-  function allImagesLoaded() {
-   $(".jm-loadingpage").fadeOut("slow");;
-  }
+         function allImagesLoaded() {
+            $(".jm-loadingpage").fadeOut("slow");;
+         }
       });
-      </script>
+   </script>
 </body>
 
 
