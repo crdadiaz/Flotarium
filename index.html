@@ -18,36 +18,50 @@
 
    <!-- SCRIPTS-->
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script src="navbar.js"></script>
 
    <!--FONT AWESOME-->   <!--ICONOS-->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
       integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 </head>
 
+<!-- BODY-->
 <body>
-     <div class="jm-loadingpage">
+
+<div class="jm-loadingpage">
       <div class="circle">
          <div class="wave"></div>
       </div>
    </div>
 
-   <!--ENCABEZADO-->
-   <section class='logo-flex-content'>
-      <div>
-         <img src="graphics/logos/logo-flotarium_1.svg" class="logo" loading="lazy" alt="logo flotarium">
- </div>
- </section>
-
+ <!--ENCABEZADO-->
+<header>
    <!--NAVBAR-->
-   <div class="navbar">
-         <div class="dropdown">
-            <section class='logo-flex-content'>
-               <div>
-                  <img src="graphics/logo/logo-flotarium_1.svg" alt="logo flotarium" class="logo">
-               </div>
-            </section>
+		<div class="menu_bar">
+			<a href="#" class="bt-menu"><span class="fas fa-bars"></span>MENU</a></div>
+		<nav>
+			<ul>
+                <!--<img src="graphics/logos/logo-flotarium_1.svg" class="logo" loading="lazy" alt="logo flotarium">-->
+                <li><a href="#"><span class="#"></span>FLOTARIUM</a></li>
+				<li><a href="#"><span class="#"></span>Inicio</a></li>
+				<li><a href="#"><span class="#"></span>Trabajos</a></li>
+				<li class="submenu">
+					<a href="#"><span class="#"></span>Proyectos<span class="fas fa-angle-down"></span></a>
+					<ul class="children">
+						<li><a href="#">SubElemento #1 <span class="#"></span></a></li>
+						<li><a href="#">SubElemento #2 <span class="#"></span></a></li>
+						<li><a href="#">SubElemento #3 <span class="#"></span></a></li>
+					</ul>
+				</li>
+				<li><a href="#"><span class="#"></span>Servicios</a></li>
+				<li><a href="#"><span class="#"></span>Contacto</a></li>
+			</ul>
+		</nav>
+   <!--NAVBAR-->
+
+   <!--WAVES-->
+	</section>
          </div> 
          <svg class="waves-navbar" id="normal-waves-navbar" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
             <defs>
@@ -60,13 +74,12 @@
                <use xlink:href="#gentle-wave-max" x="48" y="3.5" fill="var(--reversed-wave-navbar)"/>
             </g>
          </svg>
-
     </div>
+<!--WAVES-->
+   </header>
+<!--ENCABEZADO-->
 
-   <!--ENCABEZADO-->
-
-   <!--INTRODUCCION-->
-   
+<!--INTRODUCCION-->
    <div class='introduction'>
       <img src="graphics/main image/skybackground.png" data-speed="0" class="Prologo_Images_Block_Background" loading="lazy" alt="Cielo_fondo">
       <img src="graphics/main image/seabackground.png" data-speed="3.5" class="Prologo_Images_Block_Background" loading="lazy" alt="Oceano_fondo">
@@ -188,7 +201,7 @@
    </section>
 
 
-   <!--CUÁLES SON LOS BENEFICIOS-->
+<!--CUÁLES SON LOS BENEFICIOS-->
    <section class='flex-content'>
       <svg class="lower-waves">
          <use xlink:href="#normal-waves" />
@@ -256,7 +269,7 @@
    <svg class="lower-waves">
       <use xlink:href="#normal-waves" />
    </svg>
-   <div class='title-principal'>Nuestro equipo</div>
+   <div class='title-principal'>Nuestro Equipo</div>
    <svg class="lower-waves">
       <use xlink:href="#reversed-waves" />
    </svg>
@@ -330,7 +343,7 @@
       <iframe class='map' src="https://www.google.com/maps/d/embed?mid=1t3ZLb9OtakS-RjF0QR5RSv3N4i6Biyhu&ehbc=2E312F" loading="lazy"></iframe>
       <div class='texto-icons'>
          <br>
-         <h3>¡Síguenos!</h3>
+         <h3>Redes Sociales</h3>
          <br>
          <a href="#"><i class="fab fa-whatsapp-square"></i></a>&nbsp
          <a href="#"><i class="fab fa-instagram-square"></i></a>&nbsp
@@ -338,17 +351,17 @@
          <a href="#"><i class="fab fa-youtube-square"></i></a>
          <br>
          <br>
-         <h3>Habla con nosotros:</h3>
+         <h3>Habla con Nosotros:</h3>
          <br>
          <div>
-            <div class='texto-icons-2' &nbsp<a href="#"><i class="fas fa-envelope-square"></i></a>
+            <div class='texto-icons-2'><a href="#"><i class="fas fa-envelope-square"></i></a>
                &nbsp gerencia@flotarium.co
             </div>
-            <div class='texto-icons-2' &nbsp<a href="#"><i class="fas fa-phone-square"></i></a>
+            <div class='texto-icons-2'><a href="#"><i class="fas fa-phone-square"></i></a>
                &nbsp 3138934150
             </div>
-            <div class='texto-icons-2' &nbsp<a href="#"><i class="fas fa-caret-square-right"></i></a>
-               &nbsp La Pradera Dosquebradas
+            <div class='texto-icons-2'><a href="#"><i class="fas fa-caret-square-right"></i></a>
+               &nbsp La Pradera/Dosquebradas
             </div>
          </div>
       </div>
@@ -366,7 +379,7 @@
       </g>
    </svg>
    <footer>
-    <img: src="graphics/logos/logo_dustrad_1.svg" class="logo_dustrad" loading="lazy" alt="logo Dustrad"> Dustrad Technologies | 2021 | www.dustrad.com.co
+    | Dustrad Technologies | 2021 | www.dustrad.com.co
    </footer>
    <script>
       $(document).ready(function() {
