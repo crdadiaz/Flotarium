@@ -11,19 +11,13 @@
   /* Para identificar este filtro seleccione un color en formato HEX y conviertalo a filtro aqui: https://codepen.io/sosuke/pen/Pjoqqp */
   --filtro-logo:invert(100%);
   /* Wave Effect */
-  --principal-wave: rgb(0, 50, 90);
-  --second-wave: rgb(71, 114, 150);
-  --third-wave: rgb(147, 191, 228);
-  --fourth-wave: rgb(209, 222, 241);
-  --reversed-wave:rgb(255, 255, 255);
- /* Wave Effect Navbar */
-  --navbar-color-up:rgb(0, 50, 90);
-  --navbar-color-down: rgb(0, 50, 90,0.5);
-  --principal-wave-navbar: rgb(255, 255, 255);
-  --second-wave-navbar: rgb(0, 50, 90,.3);
-  --third-wave-navbar: rgb(0, 50, 90,.2);
-  --fourth-wave-navbar: rgb(0, 50, 90,.1);
-  --reversed-wave-navbar:rgba(255, 255, 255);
+  --title-color-up:rgb(0, 50, 90);
+  --title-color-down: rgb(0, 50, 90,0.5);
+  --title-color-down-not-transparent: rgb(94, 128, 155);
+  --wave-color-up: rgba(0, 50, 90, 0.3);
+  --wave-color-mid: rgb(0, 50, 90,.2);
+  --wave-color-down: rgb(0, 50, 90,.1);
+  --wave-color-reversed:rgb(255, 255, 255);
   /* Efectos Prologo */
   --prologue-width: 65%;
   --filtro-prologo:hue-rotate(0deg);
@@ -127,10 +121,9 @@ body{
     justify-content: center;
     width: 100%;
     color: var(--title-text-color);
-    font-size: clamp(1.5rem,5vw,2.5rem);
+    font-size: clamp(1.5rem,2.5vw,2.5rem);
     font-weight: bolder;
-    background-color: var(--principal-wave);
-    padding-top: 5px;
+    background-image: linear-gradient(var(--title-color-up),var(--title-color-down));
   }
 
   .title-cards{
@@ -181,7 +174,7 @@ header {
 header nav {
 	z-index:1000;
 	width:100%;
-  background-image: linear-gradient(var(--navbar-color-up),var(--navbar-color-down));
+  background-image: linear-gradient(var(--title-color-up),var(--title-color-down));
 }
 
 header nav ul {
@@ -769,7 +762,7 @@ h1{
     min-width: 200px;
     font-size: clamp(.75rem,2vw,2rem);
     overflow-wrap: break-word;
-    background-color: var(--principal-wave);
+    background-image: linear-gradient(var(--title-color-down-not-transparent),var(--title-color-up));
   }
 
   .logo-dustrad{
@@ -780,10 +773,10 @@ h1{
   .waves {
     position:relative;
     width: 100%;
-    height:15vh;
-    margin-bottom:-7px; /*Fix for safari gap*/
-    min-height:100px;
-    max-height:150px;
+    height:8vh;
+    margin-bottom:-4px; /*Fix for safari gap*/
+    min-height:80px;
+    max-height:120px;
   }
   
   .waves-navbar{
@@ -796,17 +789,15 @@ h1{
     
   .lower-waves {
     width: 100%;
-    height:5vh;
-    margin-bottom:-7px; /*Fix for safari gap*/
-    min-height:50px;
-    max-height:150px;
+    height:2vh;
+    min-height:30px;
+    max-height:100px;
   }
 
   .lower-waves-reversed {
     width: 100%;
     height:15vh;
-    margin-bottom:-7px; /*Fix for safari gap*/
-    min-height:50px;
+    min-height:100px;
     max-height:150px;
   }
   
