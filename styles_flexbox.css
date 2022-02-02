@@ -5,7 +5,7 @@
   --background-color-down: rgb(255, 255, 255);
   --title-text-color: rgb(255, 255, 255);
   --paragraph-text-color: rgb(0, 0, 0);
-  --card-color-up:rgb(65, 145, 236);
+  --card-color-up:rgb(39, 68, 112,0.5);
   --card-color-down:rgb(39, 68, 112);
   --icons-color:rgb(1, 55, 99);
   /* Para identificar este filtro seleccione un color en formato HEX y conviertalo a filtro aqui: https://codepen.io/sosuke/pen/Pjoqqp */
@@ -115,6 +115,7 @@ body{
     overflow-wrap: break-word;
   }
 
+
   .title-principal{
     display: flex;
     align-items: center;
@@ -174,7 +175,7 @@ header {
 header nav {
 	z-index:1000;
 	width:100%;
-  background-image: linear-gradient(var(--title-color-up),var(--title-color-down));
+  background-image: linear-gradient(var(--title-color-up),var(--title-color-down-not-transparent));
 }
 
 header nav ul {
@@ -316,83 +317,61 @@ header nav ul li .fas {
     padding: 2%;
   }
 
-  .introduction { 
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 2%;
+  .video-container{
+    height:90%;
+    margin: 0 auto;
+    position: relative;
   }
 
-  .Prologo_Image_Not_Absolute{
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    background-image: url("graphics/main_image_desktop/background_2.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    left:0;
-    right:0;
-    width: 30%;
-    filter: var(--filtro-prologo);
-    min-width: 200px;
+  .introduction-video{
+    width: 100%;
+    position:absolute;
   }
 
-  .Prologo_Images_Block_Background{
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    background-image: url("graphics/main_image_desktop/background_desktop_10.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    position: absolute;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    left:0;
-    right:0;
-    filter: var(--filtro-prologo);
-    width: var(--prologue-width);
-    min-width: 300px;
-    }
+  .waves-down-video{
+    width: 100%;
+    position:absolute;
+    left: 0; 
+    height: 20%;
+  }
 
-  .Prologo_Images_Block_Background_with_filter{
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background-image: url("graphics/main_image_desktop/sea_2.png");
-  background-size: 100%;
-  background-repeat: no-repeat;
-  position: absolute;
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  left:0;
-  right:0;
-  filter: var(--filtro-prologo) url(#turbulence);
-  width: var(--prologue-width);
-  min-width: 300px;
+  .waves-up-video{
+    width: 100%;
+    position:absolute;
+    left: 0; 
+    height: 10%;
+    top:90%
+  }
+
+  .background-video-canvas{
+    position:relative;
+    width: 33%;
+    background-image: url("graphics/videos/desktop-video-canvas.png");
   }
 
   @media (max-width: 550px)
-  {¨
-
-    .Prologo_Image_Not_Absolute{
-      background-image: url("graphics/main_image/background.png");
+{
+  .background-video-canvas{
+    width: 100%;
+    background-image: url("graphics/videos/mobile-video-canvas.png");
     }
-    .Prologo_Images_Block_Background{ 
-      background-image: url("graphics/main_image/skybackground3.png");
+
+    .waves-down-video{
+      width: 100%;
+      position:absolute;
+      left: 0; 
+      height: 20%;
     }
   
-    .Prologo_Images_Block_Background_with_filter{
-      background-image: url("graphics/main_image/seabackground2.png");
-      filter: var(--filtro-prologo) url(#turbulence);
+    .waves-up-video{
+      width: 100%;
+      position:absolute;
+      left: 0; 
+      height: 10%;
+      top:90%
     }
-  }
-
-
+}
+ 
   /* CONOCE NUESTRAS INSTALACIONES */
 
   .parallax > use {
