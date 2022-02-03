@@ -5,25 +5,19 @@
   --background-color-down: rgb(255, 255, 255);
   --title-text-color: rgb(255, 255, 255);
   --paragraph-text-color: rgb(0, 0, 0);
-  --card-color-up:rgb(65, 145, 236);
+  --card-color-up:rgb(39, 68, 112,0.5);
   --card-color-down:rgb(39, 68, 112);
   --icons-color:rgb(1, 55, 99);
   /* Para identificar este filtro seleccione un color en formato HEX y conviertalo a filtro aqui: https://codepen.io/sosuke/pen/Pjoqqp */
   --filtro-logo:invert(100%);
   /* Wave Effect */
-  --principal-wave: rgb(0, 50, 90);
-  --second-wave: rgb(71, 114, 150);
-  --third-wave: rgb(147, 191, 228);
-  --fourth-wave: rgb(209, 222, 241);
-  --reversed-wave:rgb(255, 255, 255);
- /* Wave Effect Navbar */
-  --navbar-color-up:rgb(0, 50, 90);
-  --navbar-color-down: rgb(0, 50, 90,0.5);
-  --principal-wave-navbar: rgb(255, 255, 255);
-  --second-wave-navbar: rgb(0, 50, 90,.3);
-  --third-wave-navbar: rgb(0, 50, 90,.2);
-  --fourth-wave-navbar: rgb(0, 50, 90,.1);
-  --reversed-wave-navbar:rgba(255, 255, 255);
+  --title-color-up:rgb(0, 50, 90);
+  --title-color-down: rgb(0, 50, 90,0.5);
+  --title-color-down-not-transparent: rgb(94, 128, 155);
+  --wave-color-up: rgba(0, 50, 90, 0.3);
+  --wave-color-mid: rgb(0, 50, 90,.2);
+  --wave-color-down: rgb(0, 50, 90,.1);
+  --wave-color-reversed:rgb(255, 255, 255);
   /* Efectos Prologo */
   --prologue-width: 65%;
   --filtro-prologo:hue-rotate(0deg);
@@ -121,16 +115,16 @@ body{
     overflow-wrap: break-word;
   }
 
+
   .title-principal{
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     color: var(--title-text-color);
-    font-size: clamp(1.5rem,5vw,2.5rem);
+    font-size: clamp(1.5rem,2.5vw,2.5rem);
     font-weight: bolder;
-    background-color: var(--principal-wave);
-    padding-top: 5px;
+    background-image: linear-gradient(var(--title-color-up),var(--title-color-down));
   }
 
   .title-cards{
@@ -181,7 +175,7 @@ header {
 header nav {
 	z-index:1000;
 	width:100%;
-  background-image: linear-gradient(var(--navbar-color-up),var(--navbar-color-down));
+  background-image: linear-gradient(var(--title-color-up),var(--title-color-down-not-transparent));
 }
 
 header nav ul {
@@ -323,83 +317,61 @@ header nav ul li .fas {
     padding: 2%;
   }
 
-  .introduction { 
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 2%;
+  .video-container{
+    height:90%;
+    margin: 0 auto;
+    position: relative;
   }
 
-  .Prologo_Image_Not_Absolute{
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    background-image: url("graphics/main_image_desktop/background_2.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    left:0;
-    right:0;
-    width: 30%;
-    filter: var(--filtro-prologo);
-    min-width: 200px;
+  .introduction-video{
+    width: 100%;
+    position:absolute;
   }
 
-  .Prologo_Images_Block_Background{
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    background-image: url("graphics/main_image_desktop/background_desktop_10.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    position: absolute;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    left:0;
-    right:0;
-    filter: var(--filtro-prologo);
-    width: var(--prologue-width);
-    min-width: 300px;
-    }
+  .waves-down-video{
+    width: 100%;
+    position:absolute;
+    left: 0; 
+    height: 20%;
+  }
 
-  .Prologo_Images_Block_Background_with_filter{
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background-image: url("graphics/main_image_desktop/sea_2.png");
-  background-size: 100%;
-  background-repeat: no-repeat;
-  position: absolute;
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  left:0;
-  right:0;
-  filter: var(--filtro-prologo) url(#turbulence);
-  width: var(--prologue-width);
-  min-width: 300px;
+  .waves-up-video{
+    width: 100%;
+    position:absolute;
+    left: 0; 
+    height: 10%;
+    top:90%
+  }
+
+  .background-video-canvas{
+    position:relative;
+    width: 33%;
+    background-image: url("graphics/videos/desktop-video-canvas.png");
   }
 
   @media (max-width: 550px)
-  {¨
-
-    .Prologo_Image_Not_Absolute{
-      background-image: url("graphics/main_image/background.png");
+{
+  .background-video-canvas{
+    width: 100%;
+    background-image: url("graphics/videos/mobile-video-canvas.png");
     }
-    .Prologo_Images_Block_Background{ 
-      background-image: url("graphics/main_image/skybackground3.png");
+
+    .waves-down-video{
+      width: 100%;
+      position:absolute;
+      left: 0; 
+      height: 20%;
     }
   
-    .Prologo_Images_Block_Background_with_filter{
-      background-image: url("graphics/main_image/seabackground2.png");
-      filter: var(--filtro-prologo) url(#turbulence);
+    .waves-up-video{
+      width: 100%;
+      position:absolute;
+      left: 0; 
+      height: 10%;
+      top:90%
     }
-  }
-
-
+}
+ 
   /* CONOCE NUESTRAS INSTALACIONES */
 
   .parallax > use {
@@ -769,7 +741,7 @@ h1{
     min-width: 200px;
     font-size: clamp(.75rem,2vw,2rem);
     overflow-wrap: break-word;
-    background-color: var(--principal-wave);
+    background-image: linear-gradient(var(--title-color-down-not-transparent),var(--title-color-up));
   }
 
   .logo-dustrad{
@@ -780,10 +752,10 @@ h1{
   .waves {
     position:relative;
     width: 100%;
-    height:15vh;
-    margin-bottom:-7px; /*Fix for safari gap*/
-    min-height:100px;
-    max-height:150px;
+    height:8vh;
+    margin-bottom:-4px; /*Fix for safari gap*/
+    min-height:80px;
+    max-height:120px;
   }
   
   .waves-navbar{
@@ -796,17 +768,15 @@ h1{
     
   .lower-waves {
     width: 100%;
-    height:5vh;
-    margin-bottom:-7px; /*Fix for safari gap*/
-    min-height:50px;
-    max-height:150px;
+    height:2vh;
+    min-height:30px;
+    max-height:100px;
   }
 
   .lower-waves-reversed {
     width: 100%;
     height:15vh;
-    margin-bottom:-7px; /*Fix for safari gap*/
-    min-height:50px;
+    min-height:100px;
     max-height:150px;
   }
   
