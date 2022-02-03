@@ -19,6 +19,7 @@
    <!-- SCRIPTS-->
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
    <script src="navbar.js"></script>
+   <script src="video.js"></script>
 
    <!--FONT AWESOME-->
    <!--ICONOS-->
@@ -51,19 +52,17 @@
       <div class="circle">
          <div class="wave"></div>
       </div>
-   </div> {% endcomment %}
-
-
+</div> 
 
 
  <!--ENCABEZADO-->
-<header>
+ <header>
    <!--NAVBAR-->
 		<div class="menu_bar">
 			<a href="#" class="bt-menu"><span class="fas fa-bars"></span>MENU</a></div>
 		<nav>
 			<ul>
-                <!--<img src="graphics/logos/logo-flotarium_1.svg" class="logo" loading="lazy" alt="logo flotarium">-->
+                <img src="graphics/logos/logo-flotarium_1.svg" class="logo" loading="lazy" alt="logo flotarium">
                 <li><a href="#"><span class="#"></span>FLOTARIUM</a></li>
 				<li><a href="#"><span class="#"></span>Inicio</a></li>
 				<li><a href="#"><span class="#"></span>Trabajos</a></li>
@@ -78,49 +77,46 @@
 				<li><a href="#"><span class="#"></span>Servicios</a></li>
 				<li><a href="#"><span class="#"></span>Contacto</a></li>
 			</ul>
-		</nav>
-   <!--NAVBAR-->
-
-   <!--WAVES-->
-	</section>
-         </div> 
-         <svg class="waves-navbar" id="normal-waves-navbar" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-            <defs>
-               <path id="gentle-wave-max" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-            </defs>
-            <g class="parallax">
-               <use xlink:href="#gentle-wave-max" x="48" y="0" fill="var(--second-wave-navbar)" />
-               <use xlink:href="#gentle-wave-max" x="48" y="1" fill="var(--third-wave-navbar)" />
-               <use xlink:href="#gentle-wave-max" x="48" y="2" fill="var(--fourth-wave-navbar)" />
-               <use xlink:href="#gentle-wave-max" x="48" y="3.5" fill="var(--reversed-wave-navbar)"/>
-            </g>
-         </svg>
-    </div>
-<!--WAVES-->
+      </nav>
    </header>
 <!--ENCABEZADO-->
 
 <!--INTRODUCCION-->
-   <div class='introduction'>
-      <img class="Prologo_Images_Block_Background" src="graphics/others/empty_background.png" loading="lazy" alt="Cielo_fondo">
-      <img class="Prologo_Images_Block_Background_with_filter" src="graphics/others/empty_background.png" loading="lazy" alt="Cielo_fondo">
-      <img class="Prologo_Image_Not_Absolute" src="graphics/others/empty_background.png" loading="lazy" alt="Cielo_fondo">
-   </div>
 
+
+
+<div class='video-container'>
+<video autoplay muted loop id="introduction-video" class="introduction-video">
+   <source src="graphics/videos/background-desktop.mp4" id="introduction-video-source" type="video/mp4">
+</video>
+<svg class="waves-down-video" viewBox="0 24 150 28" preserveAspectRatio="none"
+shape-rendering="auto">
+<defs>
+   <path id="gentle-waves" d="M-160 30c44 0 58-5 88-5s 58 5 88 5 58-5 88-5 58 5 88 5 h44v-352z" />
+</defs>
+<g class="parallax">
+   <use xlink:href="#gentle-waves" x="48" y="1" fill="var(--wave-color-down)" />
+   <use xlink:href="#gentle-waves" x="48" y="2" fill="var(--wave-color-mid)" />
+   <use xlink:href="#gentle-waves" x="48" y="0" fill="var(--title-color-down-not-transparent)" />
+</g>
+</svg>
+<img src="graphics/others/empty_background.png" class="background-video-canvas" loading="lazy" alt="canvas video">
+<svg class="waves-up-video" id="normal-waves" viewBox="0 24 150 28" preserveAspectRatio="none"
+shape-rendering="auto">
+<defs>
+   <path id="gentle-wave" d="M-160 44c30 0 58-5 88-5s 58 5 88 5 58-5 88-5 58 5 88 5 v44h-352z" />
+</defs>
+<g class="parallax">
+   <use xlink:href="#gentle-wave" x="48" y="0" fill="var(--title-color-up)" />
+   <use xlink:href="#gentle-wave" x="48" y="0" fill="var(--wave-color-up)" />
+   <use xlink:href="#gentle-wave" x="48" y="0" fill="var(--wave-color-mid)" />
+   <use xlink:href="#gentle-wave" x="48" y="0" fill="var(--wave-color-down)" />
+</g>
+</svg>
+
+</div>
    <!--QUÉ ES FLOTARIUM-->
    <section class='flex-content'>
-      <svg class="lower-waves" id="normal-waves" viewBox="0 24 150 28" preserveAspectRatio="none"
-         shape-rendering="auto">
-         <defs>
-            <path id="gentle-wave" d="M-160 44c30 0 58-5 88-5s 58 5 88 5 58-5 88-5 58 5 88 5 v44h-352z" />
-         </defs>
-         <g class="parallax">
-            <use xlink:href="#gentle-wave" x="48" y="0" fill="var(--fourth-wave)" />
-            <use xlink:href="#gentle-wave" x="48" y="1" fill="var(--third-wave)" />
-            <use xlink:href="#gentle-wave" x="48" y="2" fill="var(--second-wave)" />
-            <use xlink:href="#gentle-wave" x="48" y="3.5" fill="var(--principal-wave)" />
-         </g>
-      </svg>
       <div class='title-principal'>¿Qué es Flotarium?</div>
       <svg class="lower-waves" id="reversed-waves" viewBox="0 24 150 28" preserveAspectRatio="none"
          shape-rendering="auto">
@@ -128,10 +124,9 @@
             <path id="gentle-waves" d="M-160 30c44 0 58-5 88-5s 58 5 88 5 58-5 88-5 58 5 88 5 h44v-352z" />
          </defs>
          <g class="parallax">
-            <use xlink:href="#gentle-waves" x="48" y="0" fill="var(--fourth-wave)" />
-            <use xlink:href="#gentle-waves" x="48" y="1" fill="var(--third-wave)" />
-            <use xlink:href="#gentle-waves" x="48" y="2" fill="var(--second-wave)" />
-            <use xlink:href="#gentle-waves" x="48" y="3.5" fill="var(--principal-wave)" />
+            <use xlink:href="#gentle-waves" x="48" y="1" fill="var(--wave-color-down)" />
+            <use xlink:href="#gentle-waves" x="48" y="2" fill="var(--wave-color-mid)" />
+            <use xlink:href="#gentle-waves" x="48" y="3.5" fill="var(--wave-color-up)" />
          </g>
       </svg>
       <div class='imagen-container'>
@@ -296,7 +291,7 @@
    </svg>
    <aside class="profile-card">
 
-      <header>
+      <profile-header>
       <!--PERFILES INDIVIDUALES EQUIPO FLOTARIUM-->
         <!--  avatar -->
         <a>
@@ -309,7 +304,7 @@
         <!-- and role or location -->
         <h2>- Coaching Espiritual -</h2>
     
-      </header>
+      </profile-header>
     
       <!-- bit of a bio; who are you? -->
       <div class="profile-bio">
@@ -324,7 +319,7 @@
     </aside>
     <aside class="profile-card">
 
-      <header>
+      <profile-header>
     
         <!--  avatar -->
         <a>
@@ -337,7 +332,7 @@
         <!-- and role or location -->
         <h2>- Coaching Espiritual -</h2>
     
-      </header>
+      </profile-header>
     
       <!-- bit of a bio; who are you? -->
       <div class="profile-bio">
@@ -368,7 +363,7 @@
          loading="lazy"></iframe>
       <div class='texto-icons'>
          <br>
-         <h3>Redes Sociales</h3>
+         <h3>Redes Sociales:</h3>
          <br>
          <a href="#"><i class="fab fa-whatsapp-square"></i></a>&nbsp
          <a href="#"><i class="fab fa-instagram-square"></i></a>&nbsp
@@ -399,10 +394,10 @@
          <path id="gentle-wave-max" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
       </defs>
       <g class="parallax">
-         <use xlink:href="#gentle-wave-max" x="48" y="0" fill="var(--fourth-wave)" />
-         <use xlink:href="#gentle-wave-max" x="48" y="1" fill="var(--third-wave)" />
-         <use xlink:href="#gentle-wave-max" x="48" y="2" fill="var(--second-wave)" />
-         <use xlink:href="#gentle-wave-max" x="48" y="3.5" fill="var(--principal-wave)" />
+         <use xlink:href="#gentle-wave-max" x="48" y="0" fill="var(--wave-color-up)" />
+         <use xlink:href="#gentle-wave-max" x="48" y="1" fill="var(--wave-color-mid)" />
+         <use xlink:href="#gentle-wave-max" x="48" y="2" fill="var(--wave-color-down)" />
+         <use xlink:href="#gentle-wave-max" x="48" y="3.5" fill="var(--title-color-down-not-transparent)" />
       </g>
    </svg>
    <footer>
