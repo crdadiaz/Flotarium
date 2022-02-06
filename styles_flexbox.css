@@ -14,7 +14,7 @@
   --title-color-up:rgb(0, 50, 90);
   --title-color-down: rgb(0, 50, 90,0.5);
   --title-color-down-not-transparent: rgb(94, 128, 155);
-  --wave-color-up: rgba(0, 50, 90, 0.3);
+  --wave-color-up: rgba(0, 50, 90,.3);
   --wave-color-mid: rgb(0, 50, 90,.2);
   --wave-color-down: rgb(0, 50, 90,.1);
   --wave-color-reversed:rgb(255, 255, 255);
@@ -25,6 +25,20 @@
   --prologue-width-height: 90%;
   --filtro-prologo-mobile:hue-rotate(0deg);
 }
+
+/*LOGO FLOTARIUM*/
+ .logo{
+    display: flex;
+    justify-content: center;
+    filter:var(--filtro-logo);
+    width:25%;
+    min-width:325px;
+    margin-left:auto;
+    margin-right:auto;
+    padding:2%;
+ }
+/*LOGO FLOTARIUM*/
+
 
 
 /*EFECTO ZOOM A LAS IMAGENES*/
@@ -56,12 +70,13 @@
 }
 
 
-body{
+body {
     background-image: linear-gradient(var(--background-color-down),var(--background-color-up));
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: 'Lato', sans-serif;
-  }
+    font-weight:300;
+}
   
   .flex-content{
     display: flex;
@@ -163,19 +178,79 @@ h3{
 
 .menu_bar {
 	display:none;
-  
 }
 
+/*BOTTON SEARCH*/
+.search {
+		position:absolute;
+		padding:10px;
+		z-index:5;
+	}
+
+.search input {
+		width:0px;
+		height:60px;
+		padding:0 20px;
+		font-size:20px;
+		color:rgb(23, 32, 42);
+		box-sizing:border-box;
+		outline:none;
+		border:1px solid rgb(236, 240, 241);
+		border-radius:50px;
+		transition:all .7s ease;
+	}
+
+.placeholder {
+  color:rgb(242, 243, 244);
+}
+
+.button {
+  position:absolute;
+  top:0;
+  right:0;
+  background:linear-gradient(var(--title-color-up),var(--title-color-down-not-transparent));
+  width:80px;
+  height:80px;
+  line-height:80px;
+  text-align:center;
+  color:rgb(245, 183, 177);
+  border-radius:50%;
+  cursor:pointer;
+  transition:.5s;
+}
+
+.button i {
+   font-size:25px;
+   color:rgb(255,255,255);
+   line-height:80px;
+   transition:all .7s ease;
+}
+
+.search:hover input {
+     width:350px;
+}
+
+.search input:focus {
+     width:350px;
+}
+
+.search:hover i {
+      transform:rotate(-360deg);
+}
+/*BOTTON SEARCH*/
+
 header {
-	width: 100%;
-	font-weight: bolder;
+  width: 100%;
+  font-weight: bolder;
   text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight:400;
 }
 
 header nav {
-	z-index:1000;
+	z-index:5;
 	width:100%;
-  background-image: linear-gradient(var(--title-color-up),var(--title-color-down-not-transparent));
+    background-image: linear-gradient(var(--title-color-up),var(--title-color-down-not-transparent));
 }
 
 header nav ul {
@@ -188,7 +263,7 @@ header nav ul li {
 }
 
 header nav ul li:hover {
-	background:var(--fourth-wave);
+	background:rgb(0, 50, 90,.3);
 }
 
 header nav ul li a {
@@ -207,10 +282,10 @@ header nav ul li:hover .children {
 
 header nav ul li .children {
 	display: none;
-	background:var(--principal-wave);
+	background:rgb(0, 50, 90,.3);
 	position: absolute;
 	width: 150%;
-	z-index:1000;
+	z-index:5;
 }
 
 header nav ul li .children li {
@@ -230,8 +305,8 @@ header nav ul li .children li a span {
 }
 
 header nav ul li .fas {
-	position: relative;
-	font-size: clamp(1rem,1vw,2.5rem);
+	position:relative;
+	font-size:clamp(1rem,1vw,2.5rem);
 	top:3px;
 	margin-left:10px;
 	margin-right:0px;
@@ -240,16 +315,17 @@ header nav ul li .fas {
 
 @media screen and (max-width: 800px) {
 	body {
-		padding-top:80px;
+		padding-top:0px; /*corre el menu desplegable*/
 	}
 
-	.menu_bar {
-		display:block;
-		width:100%;
-		position: fixed;
-		top:0;
-		background-image: linear-gradient(var(--principal-wave),var(--reversed-wave));
-	}
+.menu_bar {
+	display:block;
+	width:100%;
+	position: fixed;
+	top:0;
+	z-index:5;
+	background-image: linear-gradient(var(--title-color-up),var(--title-color-down-not-transparent));
+}
 
 	.menu_bar .bt-menu {
 		display: block;
@@ -261,25 +337,56 @@ header nav ul li .fas {
 		text-decoration: none;
 	}
 
-	.menu_bar span {
-		float: right;
-		font-size: 40px;
-		color: rgb(255, 255, 255);
+.menu_bar span {
+	float: left;
+	font-size: 30px;
+	color: rgb(255, 255, 255);
+}
+
+.menu_bar .logo {
+	 min-width: 150px;
 	}
 
-	header nav {
-		width: 80%;
-		height: calc(100% - 80px);
-		position: fixed;
-		right:100%;
-		margin: 0;
-		overflow: scroll;
-	}
+/*Logo menu desplegable*/
+header nav .logo {
+	 min-width:150px;
+	 /*display:none*/
+}
 
-	header nav ul li {
-		display: block;
-		border-bottom:1px solid rgba(255,255,255,.5);
-	}
+.search {
+	position:absolute;
+	min-width:0px;
+	right:0px;
+    top:0px;
+    z-index:5
+}
+
+.button {
+  position:absolute;
+  top:0;
+  right:0;
+  background:rgb(0, 50, 90);
+ }
+
+.search:hover input {
+     width:350; /*Se debe automatizar*/
+
+}
+
+
+header nav {
+	width: 80%;
+	height: calc(100% - 80px);
+	position: fixed;
+	right:100%;
+	margin: 0;
+	overflow: scroll;
+}
+
+header nav ul li {
+	display: block;
+	border-bottom:1px solid rgba(255,255,255,.5);
+}
 
 	header nav ul li a {
 		display: block;
@@ -305,17 +412,8 @@ header nav ul li .fas {
 /* NAVBAR */
 
 
+
 /* INTRODUCCION */
-  .logo{
-    display: flex;
-    justify-content: center;
-    filter:var(--filtro-logo);
-    width: 25%;
-    min-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 2%;
-  }
 
   .video-container{
     height:90%;
@@ -692,20 +790,20 @@ h1{
 
 /* CONTÁCTANOS */
 
-  .map{
+.map {
     width: 45vh;
     height: 45vh;
     justify-content: center
-  }
-  
-  .texto-icons{
+}
+
+.texto-icons{
     text-align: center;
     padding: 2%;
     color:var(--icons-color);
     max-width: 35%;
     min-width: 380px;
     font-size: clamp(1rem,2vw,2.5rem);
-  }
+}
 
   .texto-icons-2{
     display:flex;
@@ -728,10 +826,20 @@ h1{
     text-align: center;
   }
 
+/*.flex-content {
+    font-family: 'Roboto', sans-serif;
+    font-weight:300;
+    font-size:clamp(1rem,1vw,2.5rem);
+    font-color:rgb(244, 242, 242);*/
+}
+
  /* FOOTER */
 
   footer{
     display: flex;
+    font-family: 'Roboto', sans-serif;
+    font-weight:300;
+    font-size:clamp(1rem,1vw,2.5rem);
     align-items: center;
     justify-content: center;
     padding: 5%;
@@ -739,14 +847,14 @@ h1{
     color:var(--title-text-color);
     max-width: 100%;
     min-width: 200px;
-    font-size: clamp(.75rem,2vw,2rem);
+    /*font-size: clamp(.75rem,2vw,2rem);*/
     overflow-wrap: break-word;
     background-image: linear-gradient(var(--title-color-down-not-transparent),var(--title-color-up));
   }
 
   .logo-dustrad{
     filter:invert(100%);
-    width: 3%;
+    width: 2%;
   }
   
   .waves {
@@ -802,8 +910,7 @@ h1{
   }
 
 
-
-  /* Animacion tarjetas NUESTRO */
+/* Animacion tarjetas NUESTRO */
 
 
 @import url(https://fonts.googleapis.com/css?family=Roboto);
@@ -1081,7 +1188,7 @@ aside:hover ul li:nth-child(3) {
   top: 0px;
   width: 100%;
   height: 100%;
-  z-index: 999999999;
+  z-index: 7;
   background: #fff; 
  } */
 
@@ -1097,7 +1204,7 @@ aside:hover ul li:nth-child(3) {
   border-radius: 50%;
   overflow: hidden;
   background-color: white;
-  z-index: 999999999;
+  z-index: 6;
 }
 
 @media (max-width: 768px) {
@@ -1114,7 +1221,7 @@ aside:hover ul li:nth-child(3) {
     border-radius: 50%;
     overflow: hidden;
     background-color: white;
-    z-index: 999999999;
+    z-index: 6;
   }
 }
 
