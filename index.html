@@ -13,10 +13,8 @@
    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 
-
    <!-- ESTILOS-->
    <link href="styles_flexbox.css" rel="stylesheet">
-
 
    <!-- SCRIPTS-->
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -29,8 +27,6 @@
       integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-
-
    <!-- FILTROS SVG-->
    <svg style="display: none;">
       <filter id="turbulence">
@@ -42,89 +38,93 @@
             values="0.02 0.15;0.04 0.08;0.05 0.06" repeatCount="indefinite" />
       </filter>
    </svg>
-
 </head>
 
 
 <!-- BODY-->
 <body>
-
-<div class="jm-loadingpage">
-
+   <!--GIF DE CARGA-->
+   <div class="jm-loadingpage">
       <div class="circle">
          <div class="wave"></div>
       </div>
-</div> 
+   </div>
 
 
- <!--ENCABEZADO-->
- <header>
-   <!--NAVBAR-->
-		<div class="menu_bar">
-			<a href="#" class="bt-menu"><span class="fas fa-bars"></span><img src="graphics/logos/logo-flotarium_1.svg" class="logo" loading="lazy" alt="logo flotarium"></a></div>
-		<nav>
-			<ul>
-                <img src="graphics/logos/logo-flotarium_1.svg" class="logo" loading="lazy" alt="logo flotarium">
-                <li><a href="#"><span class="#"></span>FLOTARIUM</a></li>
-				<li><a href="#"><span class="#"></span>Inicio</a></li>
-				<li><a href="#"><span class="#"></span>Trabajos</a></li>
-				<li class="submenu">
-					<a href="#"><span class="#"></span>Proyectos<span class="fas fa-angle-down"></span></a>
-					<ul class="children">
-						<li><a href="#">SubElemento #1 <span class="#"></span></a></li>
-						<li><a href="#">SubElemento #2 <span class="#"></span></a></li>
-						<li><a href="#">SubElemento #3 <span class="#"></span></a></li>
-					</ul>
-				</li>
-				<li><a href="#"><span class="#"></span>Servicios</a></li>
-				<li><a href="#"><span class="#"></span>Contacto</a></li>
-			</ul>
-           <div class="search">
-              <input type="text" placeholder="Buscar" required>
-              <div class="button">
-                 <i class="fas fa-search"></i>
-              </div>
-           </div>
+   <!--ENCABEZADO-->
+   <header>
+      <!--NAVBAR-->
+      <div class="menu_bar">
+         <a href="#" class="bt-menu"><span class="fas fa-bars"></span><img src="graphics/logos/logo-flotarium_1.svg"
+               class="logo" loading="lazy" alt="logo flotarium"></a>
+               <svg class="waves-mobile-navbar" viewBox="0 24 150 28" preserveAspectRatio="none"
+               shape-rendering="auto">
+               <defs>
+               <path id="gentle-waves" d="M-160 30c44 0 58-5 88-5s 58 5 88 5 58-5 88-5 58 5 88 5 h44v-352z" />
+               </defs>
+               <g class="parallax">
+               <use xlink:href="#gentle-waves" x="48" y="1" fill="var(--wave-color-down)" />
+               <use xlink:href="#gentle-waves" x="48" y="2" fill="var(--wave-color-mid)" />
+               <use xlink:href="#gentle-waves" x="48" y="0" fill="var(--title-color-down-not-transparent)" />
+               </g>
+               </svg>
+      </div>
+      <nav>
+         <ul>
+            <img src="graphics/logos/logo-flotarium_1.svg" class="logo" loading="lazy" alt="logo flotarium">
+            <li><a href="#what-is"><span class="#"></span>¿Qué es?</a></li>
+            <li><a href="#how-it-works"><span class="#"></span>Experiencia</a></li>
+            <li><a href="#benefits"><span class="#"></span>Beneficios</a></li>
+            <li><a href="#instalations"><span class="#"></span>Instalaciones</a></li>
+            <li><a href="#meet-us"><span class="#"></span>Contacto</a></li>
+            <li class="submenu">
+               <a href="#"><span class="#"></span>Enlaces Internos<span class="fas fa-angle-down"></span></a>
+               <ul class="children">
+                  <li><a href="#">Email Corporativo<span class="#"></span></a></li>
+                  <li><a href="#">SubElemento #2<span class="#"></span></a></li>
+                  <li><a href="#">SubElemento #3 <span class="#"></span></a></li>
+               </ul>
+            </li>
+         </ul>
+
+
       </nav>
+
    </header>
-<!--ENCABEZADO-->
 
-<!--INTRODUCCION-->
+   <!--INTRODUCCION-->
+   <div class='video-container'>
+      <video autoplay muted loop id="introduction-video" class="introduction-video">
+         <source src="graphics/videos/background-desktop.mp4" id="introduction-video-source" type="video/mp4">
+      </video>
+      <svg class="waves-down-video" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+         <defs>
+            <path id="gentle-waves" d="M-160 30c44 0 58-5 88-5s 58 5 88 5 58-5 88-5 58 5 88 5 h44v-352z" />
+         </defs>
+         <g class="parallax">
+            <use xlink:href="#gentle-waves" x="48" y="1" fill="var(--wave-color-down)" />
+            <use xlink:href="#gentle-waves" x="48" y="2" fill="var(--wave-color-mid)" />
+            <use xlink:href="#gentle-waves" x="48" y="0" fill="var(--title-color-down-not-transparent)" />
+         </g>
+      </svg>
+      <img src="graphics/others/empty_background.png" class="background-video-canvas" loading="lazy" alt="canvas video">
+      <svg class="waves-up-video" id="normal-waves" viewBox="0 24 150 28" preserveAspectRatio="none"
+         shape-rendering="auto">
+         <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-5 88-5s 58 5 88 5 58-5 88-5 58 5 88 5 v44h-352z" />
+         </defs>
+         <g class="parallax">
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="var(--title-color-up)" />
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="var(--wave-color-up)" />
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="var(--wave-color-mid)" />
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="var(--wave-color-down)" />
+         </g>
+      </svg>
 
+   </div>
 
-
-<div class='video-container'>
-<video autoplay muted loop id="introduction-video" class="introduction-video">
-   <source src="graphics/videos/background-desktop.mp4" id="introduction-video-source" type="video/mp4">
-</video>
-<svg class="waves-down-video" viewBox="0 24 150 28" preserveAspectRatio="none"
-shape-rendering="auto">
-<defs>
-   <path id="gentle-waves" d="M-160 30c44 0 58-5 88-5s 58 5 88 5 58-5 88-5 58 5 88 5 h44v-352z" />
-</defs>
-<g class="parallax">
-   <use xlink:href="#gentle-waves" x="48" y="1" fill="var(--wave-color-down)" />
-   <use xlink:href="#gentle-waves" x="48" y="2" fill="var(--wave-color-mid)" />
-   <use xlink:href="#gentle-waves" x="48" y="0" fill="var(--title-color-down-not-transparent)" />
-</g>
-</svg>
-<img src="graphics/others/empty_background.png" class="background-video-canvas" loading="lazy" alt="canvas video">
-<svg class="waves-up-video" id="normal-waves" viewBox="0 24 150 28" preserveAspectRatio="none"
-shape-rendering="auto">
-<defs>
-   <path id="gentle-wave" d="M-160 44c30 0 58-5 88-5s 58 5 88 5 58-5 88-5 58 5 88 5 v44h-352z" />
-</defs>
-<g class="parallax">
-   <use xlink:href="#gentle-wave" x="48" y="0" fill="var(--title-color-up)" />
-   <use xlink:href="#gentle-wave" x="48" y="0" fill="var(--wave-color-up)" />
-   <use xlink:href="#gentle-wave" x="48" y="0" fill="var(--wave-color-mid)" />
-   <use xlink:href="#gentle-wave" x="48" y="0" fill="var(--wave-color-down)" />
-</g>
-</svg>
-
-</div>
    <!--QUÉ ES FLOTARIUM-->
-   <section class='flex-content'>
+   <section class='flex-content' id="what-is">
       <div class='title-principal'>¿Qué es Flotarium?</div>
       <svg class="lower-waves" id="reversed-waves" viewBox="0 24 150 28" preserveAspectRatio="none"
          shape-rendering="auto">
@@ -150,9 +150,8 @@ shape-rendering="auto">
       </div>
    </section>
 
-
    <!--CÓMO FUNCIONA-->
-   <section class='flex-content'>
+   <section class='flex-content' id="how-it-works">
       <svg class="lower-waves">
          <use xlink:href="#normal-waves" />
       </svg>
@@ -172,9 +171,8 @@ shape-rendering="auto">
       </div>
    </section>
 
-
    <!--CUÁL ES LA EXPERIENCIA-->
-   <section class='flex-content'>
+   <section class='flex-content' id="experience">
       <svg class="lower-waves">
          <use xlink:href="#normal-waves" />
       </svg>
@@ -203,9 +201,8 @@ shape-rendering="auto">
       </div>
    </section>
 
-
    <!--CONOCE NUESTRAS INTSTALACIONES-->
-   <section class='flex-content'>
+   <section class='flex-content' id="instalations">
       <svg class="lower-waves">
          <use xlink:href="#normal-waves" />
       </svg>
@@ -224,9 +221,8 @@ shape-rendering="auto">
       </div>
    </section>
 
-
-<!--CUÁLES SON LOS BENEFICIOS-->
-   <section class='flex-content'>
+   <!--CUÁLES SON LOS BENEFICIOS-->
+   <section class='flex-content' id="benefits">
       <svg class="lower-waves">
          <use xlink:href="#normal-waves" />
       </svg>
@@ -288,78 +284,76 @@ shape-rendering="auto">
       </div>
    </section>
 
-<!--NUESTRO EQUIPO-->
-<section class='flex-content'>
-   <svg class="lower-waves">
-      <use xlink:href="#normal-waves" />
-   </svg>
-   <div class='title-principal'>Nuestro Equipo</div>
-   <svg class="lower-waves">
-      <use xlink:href="#reversed-waves" />
-   </svg>
-   <aside class="profile-card">
+   <!--NUESTRO EQUIPO-->
+   <section class='flex-content' id="team">
+      <svg class="lower-waves">
+         <use xlink:href="#normal-waves" />
+      </svg>
+      <div class='title-principal'>Nuestro Equipo</div>
+      <svg class="lower-waves">
+         <use xlink:href="#reversed-waves" />
+      </svg>
+      <aside class="profile-card">
 
-      <profile-header>
-      <!--PERFILES INDIVIDUALES EQUIPO FLOTARIUM-->
-        <!--  avatar -->
-        <a>
-          <img src="/graphics/equipo_images/pp.jpg" loading="lazy" alt="Perfil_Flotarium_1">
-        </a>
-    
-        <!-- the username -->
-        <h1>Jhonnathan Porras</h1>
-    
-        <!-- and role or location -->
-        <h2>- Coaching Espiritual -</h2>
-    
-      </profile-header>
-    
-      <!-- bit of a bio; who are you? -->
-      <div class="profile-bio">
-    
-        <p>Hello there!</p>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae
-         suscipit c..Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae
-         suscipit c..Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae
-         suscipit c..</p>
-   
-      </div>
-    </aside>
-    <aside class="profile-card">
+         <profile-header>
+            <!--PERFILES INDIVIDUALES EQUIPO FLOTARIUM-->
+            <!--  avatar -->
+            <a>
+               <img src="/graphics/equipo_images/team1.jpg" loading="lazy" alt="Perfil_Flotarium_1">
+            </a>
 
-      <profile-header>
-    
-        <!--  avatar -->
-        <a>
-          <img src="/graphics/equipo_images/pp.jpg" loading="lazy" alt="Perfil_Flotarium_2">
-        </a>
-    
-        <!-- the username -->
-        <h1>Jhonnathan Porras</h1>
-    
-        <!-- and role or location -->
-        <h2>- Coaching Espiritual -</h2>
-    
-      </profile-header>
-    
-      <!-- bit of a bio; who are you? -->
-      <div class="profile-bio">
-    
-        <p>Hello there!</p>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae
-         suscipit c..Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae
-         suscipit c..Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae
-         suscipit c..</p>
-    
-      </div>
-    </aside>
-    
-</section>
+            <!-- the username -->
+            <h1>Jhonnathan Porras</h1>
 
+            <!-- and role or location -->
+            <h2>- Coaching Espiritual -</h2>
 
+         </profile-header>
+
+         <!-- bit of a bio; who are you? -->
+         <div class="profile-bio">
+
+            <p>Hello there!</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae
+               suscipit c..Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae
+               Lorem Lorem Lorem  Lorem Lorem Lorem  Lorem Lorem Lorem  Lorem Lorem Lorem
+            </p>
+
+         </div>
+      </aside>
+      <aside class="profile-card">
+
+         <profile-header>
+
+            <!--  avatar -->
+            <a>
+               <img src="/graphics/equipo_images/team2.jpg" loading="lazy" alt="Perfil_Flotarium_2">
+            </a>
+
+            <!-- the username -->
+            <h1>Juliana Carvajal</h1>
+
+            <!-- and role or location -->
+            <h2>- Coaching Espiritual -</h2>
+
+         </profile-header>
+
+         <!-- bit of a bio; who are you? -->
+         <div class="profile-bio">
+
+            <p>Hello there!</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae
+               suscipit c..Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae
+               Lorem Lorem Lorem  Lorem Lorem Lorem  Lorem Lorem Lorem  Lorem Lorem Lorems
+            </p>
+
+         </div>
+      </aside>
+
+   </section>
 
    <!--CONTÁCTANOS-->
-   <section class='flex-content'>
+   <section class='flex-content' id="meet-us">
       <svg class="lower-waves">
          <use xlink:href="#normal-waves" />
       </svg>
@@ -397,6 +391,8 @@ shape-rendering="auto">
       </div>
       </div>
    </section>
+
+   <!--FOOTER-->
    <svg class="waves" id="normal-waves" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
       <defs>
          <path id="gentle-wave-max" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
@@ -410,8 +406,8 @@ shape-rendering="auto">
    </svg>
    <footer>
 
-         <img src="graphics/logos/logo_dustrad_1.svg" class="logo-dustrad" loading="lazy" alt="logo Dustrad"> &nbsp Dustrad
-         Technologies | 2021 | www.dustrad.com.co
+      <img src="graphics/logos/logo_dustrad_1.svg" class="logo-dustrad" loading="lazy" alt="logo Dustrad"> &nbsp Dustrad
+      Technologies | 2021 | www.dustrad.com.co
 
    </footer>
 
