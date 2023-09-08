@@ -87,3 +87,25 @@ Verde Oliva:
   --wave-color-reversed:rgb(255, 255, 255);
   /* Navbar */
   --navbar-background-cover: rgba(63, 2, 2,.3);
+
+  Colores Jhonathan 2da Version:
+
+  --background-color-up: rgb(0, 0, 0);
+  --background-color-down: rgb(0, 0, 0);
+  --title-text-color: rgb(255, 255, 255);
+  --paragraph-text-color: rgb(255, 255, 255);
+  --card-color-up:rgb(105, 53, 0);
+  --card-color-down:rgb(208, 173, 106);
+  --icons-color:rgb(255, 255, 255);
+  /* Para identificar este filtro seleccione un color en formato HEX y conviertalo a filtro aqui: https://codepen.io/sosuke/pen/Pjoqqp */
+  --filtro-logo:invert(100%);
+  /* Wave Effect */
+  --title-color-up:rgb(114, 74, 29);
+  --title-color-down: rgb(114, 74, 29,0.5);
+  --title-color-down-not-transparent: rgb(128, 94, 27);
+  --wave-color-up: rgba(114, 74, 29,.3);
+  --wave-color-mid: rgb(114, 74, 29,.2);
+  --wave-color-down: rgb(114, 74, 29,.1);
+  --wave-color-reversed:rgb(255, 255, 255);
+  /* Navbar */
+  --navbar-background-cover: rgba(63, 2, 2,.3);
