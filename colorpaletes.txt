@@ -1,0 +1,111 @@
+Azul principal:
+
+  --background-color-up: rgb(255, 255, 255);
+  --background-color-down: rgb(221, 217, 217);
+  --title-text-color: rgb(255, 255, 255);
+  --paragraph-text-color: rgb(0, 0, 0);
+  --card-color-up:rgb(39, 68, 112,0.5);
+  --card-color-down:rgb(39, 68, 112);
+  --icons-color:rgb(1, 55, 99);
+  /* Para identificar este filtro seleccione un color en formato HEX y conviertalo a filtro aqui: https://codepen.io/sosuke/pen/Pjoqqp */
+  --filtro-logo:invert(100%);
+  /* Wave Effect */
+  --title-color-up:rgb(0, 50, 90);
+  --title-color-down: rgb(0, 50, 90,0.5);
+  --title-color-down-not-transparent: rgb(94, 128, 155);
+  --wave-color-up: rgba(0, 50, 90,.3);
+  --wave-color-mid: rgb(0, 50, 90,.2);
+  --wave-color-down: rgb(0, 50, 90,.1);
+  --wave-color-reversed:rgb(255, 255, 255);
+  /* Navbar */
+  --navbar-background-cover: rgba(0, 50, 90,.3);
+
+Negro y plateado:
+  
+  --background-color-up: rgb(0, 0, 0); 
+  --background-color-down: rgb(0, 0, 0);
+  --title-text-color: rgb(255, 255, 255);
+  --paragraph-text-color: rgb(255, 255, 255);
+  --card-color-up:rgb(196, 195, 195);
+  --card-color-down:rgb(80, 80, 80);
+  --icons-color:rgb(255, 255, 255);
+  /* Para identificar este filtro seleccione un color en formato HEX y conviertalo a filtro aqui: https://codepen.io/sosuke/pen/Pjoqqp */
+  --filtro-logo:invert(100%);
+  /* Wave Effect */
+  --title-color-up:rgb(166, 167, 168);
+  --title-color-down: rgba(166, 167, 168, 0.5);
+  --title-color-down-not-transparent: rgb(124, 124, 124);
+  --wave-color-up: rgba(166, 167, 168,.3);
+  --wave-color-mid: rgb(166, 167, 168,.2);
+  --wave-color-down: rgb(166, 167, 168,.1);
+  --wave-color-reversed:rgb(0, 0, 0);
+  /* Navbar */
+  --navbar-background-cover: rgba(166, 167, 168,.3);
+
+
+Verde Oliva:
+
+  --background-color-up: rgb(0, 0, 0);
+  --background-color-down: rgb(19, 63, 52);
+  --title-text-color: rgb(255, 255, 255);
+  --paragraph-text-color: rgb(253, 253, 253);
+  --card-color-up:rgba(0, 80, 76, 0.5);
+  --card-color-down:rgb(55, 182, 165);
+  --icons-color:rgb(255, 255, 255);
+  /* Para identificar este filtro seleccione un color en formato HEX y conviertalo a filtro aqui: https://codepen.io/sosuke/pen/Pjoqqp */
+  --filtro-logo:invert(100%);
+  /* Wave Effect */
+  --title-color-up:rgb(0, 90, 86);
+  --title-color-down: rgb(0, 90, 86,0.5);
+  --title-color-down-not-transparent: rgb(94, 155, 137);
+  --wave-color-up: rgba(0, 90, 86,.3);
+  --wave-color-mid: rgb(0, 90, 86,.2);
+  --wave-color-down: rgb(0, 90, 86,.1);
+  --wave-color-reversed:rgb(255, 255, 255);
+  /* Navbar */
+  --navbar-background-cover: rgba(0, 90, 86,.3);
+
+
+  Colores Jhonathan:
+
+  --background-color-up: rgb(238, 221, 189);
+  --background-color-down: rgb(255, 255, 255);
+  --title-text-color: rgb(255, 255, 255);
+  --paragraph-text-color: rgb(0, 0, 0);
+  --card-color-up:rgb(105, 53, 0);
+  --card-color-down:rgb(208, 173, 106);
+  --icons-color:rgb(255, 255, 255);
+  /* Para identificar este filtro seleccione un color en formato HEX y conviertalo a filtro aqui: https://codepen.io/sosuke/pen/Pjoqqp */
+  --filtro-logo:invert(100%);
+  /* Wave Effect */
+  --title-color-up:rgb(63, 35, 2);
+  --title-color-down: rgb(63, 2, 2,0.5);
+  --title-color-down-not-transparent: rgb(128, 94, 27);
+  --wave-color-up: rgba(63, 2, 2,.3);
+  --wave-color-mid: rgb(63, 2, 2,.2);
+  --wave-color-down: rgb(63, 2, 2,.1);
+  --wave-color-reversed:rgb(255, 255, 255);
+  /* Navbar */
+  --navbar-background-cover: rgba(63, 2, 2,.3);
+
+  Colores Jhonathan 2da Version:
+
+  --background-color-up: rgb(0, 0, 0);
+  --background-color-down: rgb(0, 0, 0);
+  --title-text-color: rgb(255, 255, 255);
+  --paragraph-text-color: rgb(255, 255, 255);
+  --card-color-up:rgb(105, 53, 0);
+  --card-color-down:rgb(208, 173, 106);
+  --icons-color:rgb(255, 255, 255);
+  /* Para identificar este filtro seleccione un color en formato HEX y conviertalo a filtro aqui: https://codepen.io/sosuke/pen/Pjoqqp */
+  --filtro-logo:invert(100%);
+  /* Wave Effect */
+  --title-color-up:rgb(114, 74, 29);
+  --title-color-down: rgb(114, 74, 29,0.5);
+  --title-color-down-not-transparent: rgb(128, 94, 27);
+  --wave-color-up: rgba(114, 74, 29,.3);
+  --wave-color-mid: rgb(114, 74, 29,.2);
+  --wave-color-down: rgb(114, 74, 29,.1);
+  --wave-color-reversed:rgb(255, 255, 255);
+  /* Navbar */
+  --navbar-background-cover: rgba(63, 2, 2,.3);

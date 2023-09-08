@@ -1,195 +1,446 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <div class="All">
-  <head>
-    <!-- Referencia de la fuente.-->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap" rel="stylesheet">
-  
 
-    <!-- Referencia de la fuente.-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-    <script src="Scripts.js"></script>
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Flotarium</title>
+
+   <!--FONTS-->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+   <!-- ESTILOS-->
+   <link href="styles_flexbox.css" rel="stylesheet">
+
+   <!-- SCRIPTS-->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script src="navbar.js"></script>
+   <script src="video.js"></script>
+
+   <!--FONT AWESOME-->
+   <!--ICONOS-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+   <!-- FILTROS SVG-->
+   <svg style="display: none;">
+      <filter id="turbulence">
+         <feTurbulence id="sea-filter" numOctaves="3" seed="1" baseFrequency="0.02 0.05"></feTurbulence>
+         <feDisplacementMap scale="8" in="SourceGraphic"></feDisplacementMap>
+         <animate xlink:href="#sea-filter" attributeName="baseFrequency" dur="50s" keyTimes="0;0.5;1"
+            values="0.02 0.15;0.04 0.08;0.05 0.06" repeatCount="indefinite" />
+         <animate xlink:href="#sea-filter" attributeName="baseFrequency" dur="50s" keyTimes="0;0.5;1"
+            values="0.02 0.15;0.04 0.08;0.05 0.06" repeatCount="indefinite" />
+      </filter>
+   </svg>
+</head>
 
 
-    <link href="style.css" rel="stylesheet">
-
-    <!-- Required JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
-
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    
-    <title>Flotarium</title>
-
-  </head>
-
-
-
-
-  <body class="All">
-    <!-- Barra de navegación -->
-    <div class="pos-f-t">
-      <div class="collapse navbar-collapse justify-content-center container-md">
-        <div class="bg-dark p-4">
-          <h5 class="text-white h4">Collapsed content</h5>
-          <span class="text-muted">Toggleable via the navbar brand.</span>
-        </div>
+<!-- BODY-->
+<body>
+   <!--GIF DE CARGA-->
+   <div class="jm-loadingpage">
+      <div class="circle">
+         <div class="wave"></div>
       </div>
-      <nav class="navbar navbar-dark bg-dark">
-        <div class="collapse navbar-collapse justify-content-center container-md">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+   </div>
+
+
+   <!--ENCABEZADO-->
+   <header>
+      <!--NAVBAR-->
+      <div class="menu_bar">
+         <a href="#" class="bt-menu"><span class="fas fa-bars"></span><img src="graphics/logos/logo-flotarium_1.svg"
+               class="logo" loading="lazy" alt="logo flotarium"></a>
+               <svg class="waves-mobile-navbar" viewBox="0 24 150 28" preserveAspectRatio="none"
+               shape-rendering="auto">
+               <defs>
+               <path id="gentle-waves" d="M-160 30c44 0 58-5 88-5s 58 5 88 5 58-5 88-5 58 5 88 5 h44v-352z" />
+               </defs>
+               <g class="parallax">
+               <use xlink:href="#gentle-waves" x="48" y="1" fill="var(--wave-color-down)" />
+               <use xlink:href="#gentle-waves" x="48" y="2" fill="var(--wave-color-mid)" />
+               <use xlink:href="#gentle-waves" x="48" y="0" fill="var(--title-color-down-not-transparent)" />
+               </g>
+               </svg>
       </div>
+      <nav>
+         <ul>
+            <img src="graphics/logos/logo-flotarium_1.svg" class="logo" loading="lazy" alt="logo flotarium">
+            <li><a href="#what-is"><span class="#"></span>¿Qué es?</a></li>
+            <li><a href="#how-it-works"><span class="#"></span>Experiencia</a></li>
+            <li><a href="#benefits"><span class="#"></span>Beneficios</a></li>
+            <li><a href="#instalations"><span class="#"></span>Instalaciones</a></li>
+            <li><a href="#meet-us"><span class="#"></span>Contacto</a></li>
+            <li class="submenu">
+               <a href="#"><span class="#"></span>Enlaces Internos<span class="fas fa-angle-down"></span></a>
+               <ul class="children">
+                  <li><a href="#">Email Corporativo<span class="#"></span></a></li>
+                  <li><a href="#">SubElemento #2<span class="#"></span></a></li>
+                  <li><a href="#">SubElemento #3 <span class="#"></span></a></li>
+               </ul>
+            </li>
+         </ul>
+
+
       </nav>
-    </div>
-    <!-- Ventana Principal -->
-    
-<h2>F L O T A R I U M</h2>
-    <section>
-      <div>
-        <img src="graphics/main image/cielo.png" data-speed="0" class="layer1" alt="...">
-        <img src="graphics/main image/montaña2.png" data-speed="1" class="layer" alt="...">
-        <img src="graphics/main image/montaña1.png" data-speed="7" class="layer" alt="...">
-        <img src="graphics/main image/montaña3.png" data-speed="5" class="layer" alt="...">
-        <img src="graphics/main image/cueva.png" data-speed="0" class="layer1" alt="...">     
+
+   </header>
+
+   <!--INTRODUCCION-->
+   <div class='video-container'>
+      <video autoplay muted loop id="introduction-video" class="introduction-video">
+         <source src="graphics/videos/background-desktop.mp4" id="introduction-video-source" type="video/mp4">
+      </video>
+      <svg class="waves-down-video" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+         <defs>
+            <path id="gentle-waves" d="M-160 30c44 0 58-5 88-5s 58 5 88 5 58-5 88-5 58 5 88 5 h44v-352z" />
+         </defs>
+         <g class="parallax">
+            <use xlink:href="#gentle-waves" x="48" y="1" fill="var(--wave-color-down)" />
+            <use xlink:href="#gentle-waves" x="48" y="2" fill="var(--wave-color-mid)" />
+            <use xlink:href="#gentle-waves" x="48" y="0" fill="var(--title-color-down-not-transparent)" />
+         </g>
+      </svg>
+      <img src="graphics/others/empty_background.png" class="background-video-canvas" loading="lazy" alt="canvas video">
+      <svg class="waves-up-video" id="normal-waves" viewBox="0 24 150 28" preserveAspectRatio="none"
+         shape-rendering="auto">
+         <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-5 88-5s 58 5 88 5 58-5 88-5 58 5 88 5 v44h-352z" />
+         </defs>
+         <g class="parallax">
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="var(--title-color-up)" />
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="var(--wave-color-up)" />
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="var(--wave-color-mid)" />
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="var(--wave-color-down)" />
+         </g>
+      </svg>
+
+   </div>
+
+   <!--QUÉ ES FLOTARIUM-->
+   <section class='flex-content' id="what-is">
+      <div class='title-principal'>¿Qué es Flotarium?</div>
+      <svg class="lower-waves" id="reversed-waves" viewBox="0 24 150 28" preserveAspectRatio="none"
+         shape-rendering="auto">
+         <defs>
+            <path id="gentle-waves" d="M-160 30c44 0 58-5 88-5s 58 5 88 5 58-5 88-5 58 5 88 5 h44v-352z" />
+         </defs>
+         <g class="parallax">
+            <use xlink:href="#gentle-waves" x="48" y="1" fill="var(--wave-color-down)" />
+            <use xlink:href="#gentle-waves" x="48" y="2" fill="var(--wave-color-mid)" />
+            <use xlink:href="#gentle-waves" x="48" y="3.5" fill="var(--wave-color-up)" />
+         </g>
+      </svg>
+      <div class='imagen-container'>
+         <img src="graphics/flotarium_images_reduced/20210927182711_opt.jpg" class='imagen' loading="lazy"
+            alt="Publicidad_Flotarium_1">
       </div>
-    </section>
-    <script type="text/javascript">
-        document.addEventListener("mousemove",parallax);
-        function parallax(e){
+      <div class='texto'>
+         Es un tanque de privación sensorial que contiene una solución de agua y sulfato de magnesio (sal Epsom) con
+         una cantidad precisa para crear una densidad similar a la del mar muerto, permitiendo que el cuerpo flote sin
+         menor esfuerzo y disfrutar de la sensación de ingravidez.
+         Para aumentar la sensación de tranquilidad y bienestar, nuestro tanque aporta musicoterapia, cromoterapia,
+         aromaterapia y Ozono.
+      </div>
+   </section>
 
-          this.querySelectorAll('.layer').forEach(layer=>{const speed = layer.getAttribute('data-speed')
-          const x = (window.innerWidth - (e.pageX*speed))/100
-        layer.style.transform = `translateX(${x}px)`
-        })
-        }
+   <!--CÓMO FUNCIONA-->
+   <section class='flex-content' id="how-it-works">
+      <svg class="lower-waves">
+         <use xlink:href="#normal-waves" />
+      </svg>
+      <div class='title-principal'>¿Cómo funciona?</div>
+      <svg class="lower-waves">
+         <use xlink:href="#reversed-waves" />
+      </svg>
+      <div class='texto'>El tanque de aislamiento sensorial contiene en su interior 600 litros de agua y 300 kilos de
+         sales Epsom o sulfato de magnesio (un compuesto químico conocido con la fórmula Mg SO4·7H2O). De esta forma, se
+         consigue crear una densidad como la del Mar Muerto donde cualquier intento de sumergirse se ve frustrado ya que
+         el cuerpo flota sin ningún tipo de esfuerzo.
+         Se pierde la noción del peso del cuerpo.
+         La temperatura del agua oscila entre los 35º y los 37.5º C, de esta forma no se siente ni frío ni calor.
+         La persona que entra en el tanque tiene la sensación de que su cuerpo se funde con el agua.</div>
+      <div class='imagen-container'><img src="graphics/flotarium_images_reduced/20210927162431_opt.jpg" class='imagen'
+            loading="lazy" alt="Publicidad_Flotarium_2">
+      </div>
+   </section>
 
-    </script>
+   <!--CUÁL ES LA EXPERIENCIA-->
+   <section class='flex-content' id="experience">
+      <svg class="lower-waves">
+         <use xlink:href="#normal-waves" />
+      </svg>
+      <div class='title-principal'>¿Cuál es la experiencia?</div>
+      <svg class="lower-waves">
+         <use xlink:href="#reversed-waves" />
+      </svg>
+      <div class='texto-full-lenght'>Nuestro centro terapéutico Armonía y Vida se encuentra ubicado en el sector de la
+         Pradera en Dosquebradas, allí,
+         hemos construido el primer tanque de privación
+         sensorial de la región para ofrecerte la experiencia única de Flotarium y sus beneficios.
+         <br>
+         <br>
+         Agenda tu cita y permítele a tu cuerpo y a tu mente entrar en un estado de relajación profunda para encontrar
+         una
+         calma duradera, todo esto en una sesión
+         de 60 minutos en los que flotarás en nuestro tanque de privación sensorial al igual que lo harías en el mar
+         muerto.
+         <br>
+         <br>
+         No necesitas traer nada, dispondrás de toallas, champú, gel, tapones para los oídos, secadores y una botella de
+         agua, todo incluído en nuestro servicio.
+         <br>
+         <br>
+         Aprenderás de la experiencia de la mano de nuestro personal experto de Armonía y Vida.
+      </div>
+   </section>
 
-    <script type="text/javascript">
-        $(document).ready(function(){
-          $
-        })
-    </script>
+   <!--CONOCE NUESTRAS INTSTALACIONES-->
+   <section class='flex-content' id="instalations">
+      <svg class="lower-waves">
+         <use xlink:href="#normal-waves" />
+      </svg>
+      <div class='title-principal'>Conoce nuestras instalaciones</div>
+      <svg class="lower-waves">
+         <use xlink:href="#reversed-waves" />
+      </svg>
+      <div class='image-full-lenght'>
+         <div class="gallery-wrap">
+            <div class="item item-1"></div>
+            <div class="item item-2"></div>
+            <div class="item item-3"></div>
+            <div class="item item-4"></div>
+            <div class="item item-5"></div>
+         </div>
+      </div>
+   </section>
 
-
-<section2>
-<h3>¿Qué es Flotarium?</h3>
-
-<h4>Es un tanque de privación sensorial que contiene una solución de agua y sulfato de magnesio (sal Epsom) con una cantidad precisa para crear una densidad similar a la del mar muerto, permitiendo que el cuerpo flote sin menor esfuerzo y disfrutar de la sensación de ingravidez. 
-  Para aumentar la sensación de tranquilidad y bienestar, nuestro tanque aporta musicoterapia, cromoterapia, aromaterapia y Ozono.</h4>
-</section2>
-
-
-<section3>
-  <div class="container mt-2">
-    <div class="row">
-      <div class="col-md-4 col-12">
-        <ul class="list-unstyled">
-          <li class="media">
-            <img class="mr-3" src="file:///C|/Users/Cristhian/AppData/Roaming/Adobe/Dreamweaver 2020/es_ES/Configuration/Temp/Assets/eam434A.tmp/images/35X35.gif" alt="Generic placeholder image">
-            <div class="media-body">
-              <h4 class="mt-0 mb-1">List-based media object</h4>
-              <h4 class="mt-0 mb-1">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</h4>
+   <!--CUÁLES SON LOS BENEFICIOS-->
+   <section class='flex-content' id="benefits">
+      <svg class="lower-waves">
+         <use xlink:href="#normal-waves" />
+      </svg>
+      <div class='title-principal'>¿Cuáles son los beneficios?</div>
+      <svg class="lower-waves">
+         <use xlink:href="#reversed-waves" />
+      </svg>
+      <div class="wrapper">
+         <div class="cols">
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+               <div class="container" input type="checkbox">
+                  <div class="front" style="background-image: url('graphics/benefits_images/espirituales.jpg')">
+                     <div class="inner">
+                        <p>Espirituales</p>
+                        <span>¡Descúbrelos!</span>
+                     </div>
+                  </div>
+                  <div class="back">
+                     <div class="inner">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae
+                           suscipit c.</p>
+                     </div>
+                  </div>
+               </div>
             </div>
-          </li>
-        </ul>
-      </div>
-      <div class="col-md-4 col-12">
-        <ul class="list-unstyled">
-          <li class="media">
-            <img class="mr-3" src="file:///C|/Users/Cristhian/AppData/Roaming/Adobe/Dreamweaver 2020/es_ES/Configuration/Temp/Assets/eam434A.tmp/images/35X35.gif" alt="Generic placeholder image">
-            <div class="media-body">
-              <h4 class="mt-0 mb-1">List-based media object</h4>
-              <h4 class="mt-0 mb-1">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</h4>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+               <div class="container">
+                  <div class="front" style="background-image: url('graphics/benefits_images/fisicos.jpg')">
+                     <div class="inner">
+                        <p>Físicos</p>
+                        <span>¡Descúbrelos!</span>
+                     </div>
+                  </div>
+                  <div class="back">
+                     <div class="inner">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae
+                           suscipit c.</p>
+                     </div>
+                  </div>
+               </div>
             </div>
-          </li>
-        </ul>
-      </div>
-      <div class="col-md-4 col-12">
-        <ul class="list-unstyled">
-          <li class="media">
-            <img class="mr-3" src="file:///C|/Users/Cristhian/AppData/Roaming/Adobe/Dreamweaver 2020/es_ES/Configuration/Temp/Assets/eam434A.tmp/images/35X35.gif" alt="Generic placeholder image">
-            <div class="media-body">
-              <h4 class="mt-0 mb-1">List-based media object</h4>
-              <h4 class="mt-0 mb-1">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</h4>
+            <div class="col">
+               <div class="container">
+                  <div class="front" style="background-image: url('graphics/benefits_images/psicologicos.jpg')">
+                     <div class="inner">
+                        <p>Psicológicos</p>
+                        <span>¡Descúbrelos!</span>
+                     </div>
+                  </div>
+                  <div class="back">
+                     <div class="inner">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae
+                           suscipit c.</p>
+                     </div>
+                  </div>
+               </div>
             </div>
-          </li>
-        </ul>
+         </div>
       </div>
-    </div>
-  </div>
-</section3>
+   </section>
 
-<section4>
+   <!--NUESTRO EQUIPO-->
+   <section class='flex-content' id="team">
+      <svg class="lower-waves">
+         <use xlink:href="#normal-waves" />
+      </svg>
+      <div class='title-principal'>Nuestro Equipo</div>
+      <svg class="lower-waves">
+         <use xlink:href="#reversed-waves" />
+      </svg>
+      <aside class="profile-card">
 
-  <div class="section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 col-12">
-          <h3 class="text-center">WHO WE ARE</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, ducimus, sit, quibusdam quidem recusandae veniam eos quod error nisi repellat excepturi laboriosam aspernatur suscipit possimus consectetur dolores nihil labore quas eius illo accusamus nulla sed blanditiis porro accusantium. Perspiciatis, perferendis!</p>
-        </div>
-        <div class="col-md-4 col-12">
-          <h3 class="text-center">GET IN TOUCH</h3>
-          <address class="text-center">
-            <strong>MyCompany, Inc.</strong><br>
-            Sunny Autumn Plaza, Grand Coulee,<br>
-            CA, 91308-4075, US<br>
-            <abbr title="Phone">P:</abbr> (123) 456-7890
-          </address>
-        </div>
-        <div class="col-md-4 col-12">
-          <h3 class="text-center">NEWSLETTER</h3>
-          <form>
-            <div class="form-group col-12">
-              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-              <button type="submit" class="btn btn-dark mt-2">Subscribe</button>
+         <profile-header>
+            <!--PERFILES INDIVIDUALES EQUIPO FLOTARIUM-->
+            <!--  avatar -->
+            <a>
+               <img src="graphics/equipo_images/team1.jpg" loading="lazy" alt="Perfil_Flotarium_1">
+            </a>
+
+            <!-- the username -->
+            <h1>Jhonnathan Porras</h1>
+
+            <!-- and role or location -->
+            <h2>- Coaching Espiritual -</h2>
+
+         </profile-header>
+
+         <!-- bit of a bio; who are you? -->
+         <div class="profile-bio">
+
+            <p>Hello there!</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae
+               suscipit c..Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae
+               Lorem Lorem Lorem  Lorem Lorem Lorem  Lorem Lorem Lorem  Lorem Lorem Lorem
+            </p>
+
+         </div>
+      </aside>
+      <aside class="profile-card">
+
+         <profile-header>
+
+            <!--  avatar -->
+            <a>
+               <img src="graphics/equipo_images/team2.jpg" loading="lazy" alt="Perfil_Flotarium_2">
+            </a>
+
+            <!-- the username -->
+            <h1>Juliana Carvajal</h1>
+
+            <!-- and role or location -->
+            <h2>- Coaching Espiritual -</h2>
+
+         </profile-header>
+
+         <!-- bit of a bio; who are you? -->
+         <div class="profile-bio">
+
+            <p>Hello there!</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae
+               suscipit c..Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae
+               Lorem Lorem Lorem  Lorem Lorem Lorem  Lorem Lorem Lorem  Lorem Lorem Lorems
+            </p>
+
+         </div>
+      </aside>
+
+   </section>
+
+   <!--CONTÁCTANOS-->
+   <section class='flex-content' id="meet-us">
+      <svg class="lower-waves">
+         <use xlink:href="#normal-waves" />
+      </svg>
+      <div class='title-principal'>Contáctanos</div>
+      <svg class="lower-waves">
+         <use xlink:href="#reversed-waves" />
+      </svg>
+      <iframe class='map' src="https://www.google.com/maps/d/embed?mid=1t3ZLb9OtakS-RjF0QR5RSv3N4i6Biyhu&ehbc=2E312F"
+         loading="lazy"></iframe>
+      <div class='texto-icons'>
+         <br>
+         <h3>Redes Sociales:</h3>
+         <br>
+         <a href="#"><i class="fab fa-whatsapp-square"></i></a>&nbsp
+         <a href="#"><i class="fab fa-instagram-square"></i></a>&nbsp
+         <a href="#"><i class="fab fa-facebook-square"></i></a>&nbsp
+         <a href="#"><i class="fab fa-youtube-square"></i></a>
+         <br>
+         <br>
+         <h3>Habla con Nosotros:</h3>
+         <br>
+         <div>
+
+            <div class='texto-icons-2'><a href="#"><i class="fas fa-envelope-square"></i></a>
+               &nbsp gerencia@flotarium.co
             </div>
-          </form>
-        </div>
+            <div class='texto-icons-2'><a href="#"><i class="fas fa-phone-square"></i></a>
+               &nbsp 3138934150
+            </div>
+            <div class='texto-icons-2'><a href="#"><i class="fas fa-caret-square-right"></i></a>
+               &nbsp La Pradera Dosquebradas
+
+            </div>
+         </div>
       </div>
-    </div>
-  </div>
+      </div>
+   </section>
 
-</section4>
+   <!--FOOTER-->
+   <svg class="waves" id="normal-waves" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+         <path id="gentle-wave-max" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+      </defs>
+      <g class="parallax">
+         <use xlink:href="#gentle-wave-max" x="48" y="0" fill="var(--wave-color-up)" />
+         <use xlink:href="#gentle-wave-max" x="48" y="1" fill="var(--wave-color-mid)" />
+         <use xlink:href="#gentle-wave-max" x="48" y="2" fill="var(--wave-color-down)" />
+         <use xlink:href="#gentle-wave-max" x="48" y="3.5" fill="var(--title-color-down-not-transparent)" />
+      </g>
+   </svg>
+   <footer>
 
-    <!-- Optional JavaScript; choose one of the two! -->
+      <img src="graphics/logos/logo_dustrad_1.svg" class="logo-dustrad" loading="lazy" alt="logo Dustrad"> &nbsp Dustrad
+      Technologies | 2021 | www.dustrad.com.co
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+   </footer>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
-    -->
-  
+   <script>
+      $(document).ready(function () {
+         // Images loaded is zero because we're going to process a new set of images.
+         var imagesLoaded = 0;
+         // Total images is still the total number of <img> elements on the page.
+         var totalImages = $("img").length;
+
+         // Step through each image in the DOM, clone it, attach an onload event
+         // listener, then set its source to the source of the original image. When
+         // that new image has loaded, fire the imageLoaded() callback.
+         $("img").each(function (idx, img) {
+            $("<img>").on("load", imageLoaded).attr("src", $(img).attr("src"));
+         });
+
+         // Do exactly as we had before -- increment the loaded count and if all are
+         // loaded, call the allImagesLoaded() function.
+         function imageLoaded() {
+            imagesLoaded++;
+            if (imagesLoaded == totalImages) {
+               allImagesLoaded();
+            }
+         }
+
+         function allImagesLoaded() {
+            $(".jm-loadingpage").fadeOut("slow");;
+         }
+      });
+   </script>
 </body>
-<footer>
 
-  <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-<defs>
-<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-</defs>
-<g class="parallax">
-<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(37,248,248,0.7" />
-<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(37,248,248,0.5)" />
-<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(37,248,248,0.3)" />
-<use xlink:href="#gentle-wave" x="48" y="7" fill="#71fae8" />
-</g>
-</svg>
-</footer>
 
-<div class="content flex">
-  <p>Dustrad | 2021 | www.dustrad.com</p>
-  </div>
+
 </html>
